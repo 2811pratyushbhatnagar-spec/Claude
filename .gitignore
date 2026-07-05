@@ -1,0 +1,5 @@
+# Derived views and runner state — regenerated, not canon
+status.html
+Scripts/.cycle_state.json
+**/__pycache__/
+*.pyc

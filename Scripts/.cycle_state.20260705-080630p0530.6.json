@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-07-05T08:06:30+05:30",
+  "heartbeat": "cycle clean, no material change -- canon:67860aa4bb77",
+  "validate_clean": true,
+  "validate_output": "validate: clean  [8 docs vs status.json]",
+  "canon_hash": "67860aa4bb77c44f8d7f92806d0606187079f4ad74e4bed3d2373482b31dc932",
+  "git_head": null,
+  "ledgers": "A 0.1/frozen \u00b7 B 0.5/frozen \u00b7 C 0.1/open \u00b7 D 0.1/open-empty-allowed \u00b7 E 0.1/active-append-only",
+  "ledgerE_latest": "2026-07-04 \u2014 snapshot",
+  "first_run": false,
+  "material_change": false,
+  "changed_files": [],
+  "manifest": [
+    [
+      "ARCHITECTURE.md",
+      "70f97c8e49b104121c765f1b13ebf29faf3447b44b62323d56bfb0ede8f5d33f",
+      5588
+    ],
+    [
+      "Experiments/Carry-Set_Separation_note.md",
+      "cc1b62234cb19e9e4e9f9c9776f25310bda0f842d83a5c186b5376e209ac960e",
+      10726
+    ],
+    [
+      "Experiments/carry_character_lemma.md",
+      "597ae1a4835763f496aeae28e0959d8241c211fed584d04ce18b2afcb153e56e",
+      7585
+    ],
+    [
+      "Experiments/carryset_fixed_e_proof.md",
+      "2fa77c6f2c500a7f012988a0f518672e978705996128b110cd7dfdcc959c8a1b",
+      7489
+    ],
+    [
+      "Journal/lens_optional.md",
+      "bb09d1609483218288c5aec0ac38da0acc67cb8e8574836068407254c407c9de",
+      1041
+    ],
+    [
+      "LedgerB/kernel_v0.3.md",
+      "0f4c1ba547e27817b4fdf46d6587336d698a996fdd93f37d87ba084e997a35a0",
+      4893
+    ],
+    [
+      "LedgerB/protocol_ledger_v0.5.md",
+      "5b03dc71d5696e111b5931a02e98ceb85f7aa6cb63d36e2a9ec26b47f96e4cb4",
+      7239
+    ],
+    [
+      "LedgerE/ledger_E_evidence_log.md",
+      "e3e9cfd9e6a80f1a27ddbebfe2aea6a463ee895c1b000e90ab0a9fffb0f7aa8a",
+      4622
+    ],
+    [
+      "status.json",
+      "50c064f8d74d0ac6ed8056429983230ca83faca4c16eca9d598b96fb473e338e",
+      2253
+    ]
+  ]
+}

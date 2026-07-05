@@ -1,0 +1,9 @@
+$ python3 verify.py
+(A) carry-set injectivity on G-orbits, odd primes 5..250 (51 primes): holds for ALL (no colliding prime)
+(B) certificate  K_P(e) = D(e)  as spaces:
+    e= 7:  D subset K_P = True,  dim K_P= 3, dim D= 3   =>  K_P = D certified: True
+    e=11:  D subset K_P = True,  dim K_P= 7, dim D= 7   =>  K_P = D certified: True
+    e=13:  D subset K_P = True,  dim K_P= 8, dim D= 8   =>  K_P = D certified: True
+    e=17:  D subset K_P = True,  dim K_P=12, dim D=12   =>  K_P = D certified: True
+    e=19:  D subset K_P = True,  dim K_P=13, dim D=13   =>  K_P = D certified: True
+    e=23:  D subset K_P = True,  dim K_P=17, dim D=17   =>  K_P = D certified: True

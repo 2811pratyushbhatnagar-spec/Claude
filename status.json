@@ -1,0 +1,57 @@
+{
+  "project": "reversible-contact",
+  "updated": "2026-07-04",
+  "_note": "Canonical single source of truth. Every document's stated ledger version/state must match this. validate.py enforces it. Nothing else declares status.",
+  "ledgers": {
+    "A": {
+      "name": "Mathematics",
+      "version": "0.1",
+      "state": "frozen",
+      "question": "What mathematical statements survive proof or reproducible computation?",
+      "success": "formal validity and reproducibility",
+      "open": ["R1 general proof (>|S|=2)", "R2 general proof", "D4 local-states variant", "D5 partial-identity variant", "|S|=3 replication"]
+    },
+    "B": {
+      "name": "Protocol",
+      "version": "0.5",
+      "state": "frozen",
+      "question": "Does this interaction preserve the participant's independent judgment?",
+      "success": "reversibility, transparency, non-capture; survives self-application"
+    },
+    "C": {
+      "name": "Correspondence",
+      "version": "0.1",
+      "state": "open",
+      "admitted": 0,
+      "question": "Which translations are supported independently on both sides?",
+      "success": "explicit, evidence-preserving translations; empty is acceptable"
+    },
+    "D": {
+      "name": "Ontology",
+      "version": "0.1",
+      "state": "open-empty-allowed",
+      "question": "Which ontological questions remain meaningful after the lower ledgers stabilize?",
+      "success": "disciplined ontological openness; P1 is a question schema"
+    },
+    "E": {
+      "name": "Evidence Log",
+      "version": "0.1",
+      "state": "active-append-only",
+      "question": "What actually happened during the research?",
+      "success": "faithful, dated, append-only record including negatives"
+    }
+  },
+  "journal": {
+    "state": "separate-companion",
+    "question": "Does this orient attention honestly without replacing evidence?",
+    "success": "orientational accuracy without coercion"
+  },
+  "architecture": {
+    "state": "frozen-shape",
+    "shape": ["A", "B", "C", "D", "E", "Journal"],
+    "invariant": "Never replace a map with an identification."
+  },
+  "governance": {
+    "tier3_human_only": ["admit Ledger C entry", "change Ledger B", "promote conjecture->theorem", "add ontology", "publish interpretation"]
+  }
+}
