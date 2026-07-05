@@ -16,12 +16,13 @@ discipline applied to the inquiry itself — contact that preserves distinctness
   availability / execution, structural / normative, individual / collective, P2 / P1). They appear analogous;
   no identity between them is claimed.
 
-## Ledger A — Mathematics · *frozen v0.1 (ultracode)*
+## Ledger A — Mathematics · *frozen v0.2 canonical*
 Signature, open signature decisions, weakest axioms, finite models, W-series witnesses, independence results,
 proven correspondence theorems, P1 question schema.
 **Success:** stands or falls independently of any interpretation.
-**Status:** signature drafted; five bake-ins caught; W1–W3 verified. Next — freeze the signature, run the
-witnesses, freeze the ledger.
+**Status:** v0.2 canonical (2026-07-04; supersedes v0.1, whose witness/independence content is carried
+forward unchanged). Round-2 results in: Theorem R1 at searched scales + candidate general proof
+(conjecture-grade pending independent audit); determinism boundary; R2 + dual; |S|=3 replication.
 
 ## Ledger B — Protocol · *frozen (v0.5)*
 Kernel; reversible contact / re-choosability; the self-application clauses (Transparency, Exit, Self-
@@ -68,7 +69,7 @@ question is this trying to answer?* If the answer is "two at once," split it or 
 | Interpretive Journal | Does this orient attention honestly without replacing evidence? |
 
 **Architecture freeze.** The *structure* — A / B / C / D / E + Journal — is frozen. Content versions freely
-(Ledger A v0.1, Ledger B v0.5, …); the architecture versions *rarely*, and only with a reason recorded in
+(Ledger A v0.2, Ledger B v0.5, …); the architecture versions *rarely*, and only with a reason recorded in
 Ledger E. A structure that can absorb new mathematics, new protocol tests, and negative results without
 reorganizing itself is the sign the framework has matured from redesign into sustained research. Ledger D
 depends on nothing and nothing depends on Ledger D — so ontology can never quietly become the hidden

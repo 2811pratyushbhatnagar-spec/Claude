@@ -13,10 +13,15 @@ docs = glob.glob(os.path.join(ROOT, "**", "*.md"), recursive=True)
 flags = []
 
 # 1. version drift -- any doc stating "Ledger X ... v0.N" must match status.json
+# Exempt the two HISTORICAL layers (LedgerE/ evidence log, reconciliation/ frozen snapshots):
+# they are append-only records of the *path* and legitimately name superseded versions;
+# drift-checking applies to current-state docs only. (Added 2026-07-05 with the A v0.2 adoption.)
+HISTORICAL = (os.sep + "LedgerE" + os.sep, os.sep + "reconciliation" + os.sep)
+current_docs = [p for p in docs if not any(h in p for h in HISTORICAL)]
 for L, info in status["ledgers"].items():
     want = info["version"]
     pat = re.compile(r"Ledger\s+%s\b.{0,60}?v?0\.(\d+)" % L, re.S)
-    for p in docs:
+    for p in current_docs:
         t = open(p, encoding="utf-8", errors="ignore").read()
         for m in pat.finditer(t):
             got = "0." + m.group(1)

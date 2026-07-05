@@ -3,3 +3,7 @@ status.html
 Scripts/.cycle_state.json
 **/__pycache__/
 *.pyc
+
+# added by automation audit (2026-07-05): catch timestamped runner state + non-canon audit dir
+Scripts/.cycle_state.*.json
+.automation/

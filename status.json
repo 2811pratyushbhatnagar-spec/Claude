@@ -1,15 +1,15 @@
 {
   "project": "reversible-contact",
-  "updated": "2026-07-04",
+  "updated": "2026-07-05",
   "_note": "Canonical single source of truth. Every document's stated ledger version/state must match this. validate.py enforces it. Nothing else declares status.",
   "ledgers": {
     "A": {
       "name": "Mathematics",
-      "version": "0.1",
+      "version": "0.2",
       "state": "frozen",
       "question": "What mathematical statements survive proof or reproducible computation?",
       "success": "formal validity and reproducibility",
-      "open": ["R1 general proof (>|S|=2)", "R2 general proof", "D4 local-states variant", "D5 partial-identity variant", "|S|=3 replication"]
+      "open": ["R1 general proof: candidate recorded, conjecture-grade pending independent audit", "exact-number diff vs ledger_a_verify.py (file absent at snapshot)", "n=4 enumeration / convergence probe"]
     },
     "B": {
       "name": "Protocol",

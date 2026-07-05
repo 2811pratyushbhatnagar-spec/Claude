@@ -33,5 +33,15 @@ other ledgers) from the *path* that produced it (here).
 
 ---
 
+## 2026-07-05 — snapshot
+
+| Item | Outcome | Why / note |
+|---|---|---|
+| Ledger A canonicalized at v0.2 | **Adopted into repo** (`LedgerA/ledger_A_math_v0.2_canonical.md` + harnesses), steward-authorized ("yes, fix that move") | v0.2 (frozen 2026-07-04) supersedes v0.1; carries the round-2 results — R1 candidate general proof (conjecture-grade pending independent audit), determinism boundary (strict → bijections; ⊆Δ → partial bijections 7/34; free → 56 F-eq survivors, 37 nondet), R2 + dual, \|S\|=3 replication (6 = 3!), local-states by construction, two adversarial flags (comp-uniqueness a choice; inv redundant at max point) |
+| Round-2 reconciliation | **Frozen 2026-07-04, imported** to `reconciliation/` | full agreement, no disagreements; complementary methods (R-series enumeration / W-series witnesses); notation map adopted (F-eq/F-sup/F-sub, RET-∃/RET-!, EI-w1/w2). Caveat stands: exact-number diff pending — `ledger_a_verify.py` still not on disk |
+| validate.py: historical-layer exemption | **Tooling change** (procedures-only, non-canon) | version-drift check now skips `LedgerE/` + `reconciliation/` — append-only history legitimately names superseded versions; drift-checking is for current-state docs. Without this, bumping canon would force editing frozen history |
+
+---
+
 *Governance: append-only; dated snapshots; corrections are new rows, never edits. New concepts do not enter
 here — only records of what happened to them.*
