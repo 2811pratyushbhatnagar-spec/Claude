@@ -1,0 +1,19 @@
+A) Step-1 lemma battery: sym-dim == 1 iff irreducible (COMPACT case)
+rep                           sym  irreducible?   verdict
+Z3 rot (irr, C-type)            1  True           consistent
+Z4 rot (irr, C-type)            1  True           consistent
+D4 2dim (irr, R-type)           1  True           consistent
+Z3 rot + trivial (RED)          2  False          consistent
+D4 + D4 (RED, mult 2)           3  False          consistent
+Z3 + Z4 rots (RED)              2  False          consistent
+Z3 + Z3 (RED, mult 2)           4  False          consistent
+unipotent flow (NON-compact)    1  False          sym-dim 1 yet REDUCIBLE -> compactness load-bearing
+
+B) Equivariant state->effect identifications for Z3 (g^T L g = L):
+   dim = 2 (expect 2: span{metric m, orientation omega}) -> antisym part of ANY equivariant transition rule is a multiple of omega
+
+C) Dynamical measurability: P(t,th) = (1 + <f, R_t x(th)>)/2,
+   x(th) = eps*(cos th, sin th); claim d2P/dtdth|_0 = (eps/2)*omega(f, x'(0))/|..|
+   max |Hessian - (1/2) m(f, J x'(0))| over 6 tomographic f's: 3.61e-09
+   -> the response Hessian tabulates omega (via m-identification); enactable
+      flow REQUIRED: for the Z3 pinwheel no such flow exists in Aut(K).
