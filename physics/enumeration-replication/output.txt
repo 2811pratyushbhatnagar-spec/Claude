@@ -1,0 +1,39 @@
+tables with nu.nu = E pinned          : 6561   (recorded: 6561)
+stage 1  associativity survivors      : 17   (recorded: 17)
+
+-- single-filter action on the associative survivors --
+  FGA EE_ne_E    [E.E != E]                      -> 2
+  FGA left_act   [all x: E.x != x]               -> 1
+  FGA right_act  [all x: x.E != x]               -> 1
+  FGA two_sided  [all x: E.x!=x and x.E!=x]      -> 1
+  AR  EE_eq_nu   [E.E = nu]                      -> 1
+  AR  nu_in_img  [some a.b = nu]                 -> 9
+  AR  rows_nu    [all x, some y: x.y = nu]       -> 4
+  AR  gen_nuE    [nu, E each generate Omega]     -> 1
+  AR  verbatim   [non-idempotent x generate]     -> 1
+  AR  lit_apr28  [a,b in {nu,E}: a.b != I]       -> 14
+
+-- full fingerprint scan --
+   need: |FGA(A)| = 2, |AR(FGA(A))| = 1, survivor = shifted table,
+         redundancy |AR(A)| = 1 (record: FGA redundant given AR at n=3)
+   MATCH  FGA = EE_ne_E  ;  AR = EE_eq_nu
+   MATCH  FGA = EE_ne_E  ;  AR = gen_nuE
+   MATCH  FGA = EE_ne_E  ;  AR = verbatim
+   the rival table eliminated by AR (the 'second survivor'):
+      (1, 2, 2)
+      (2, 2, 2)
+      (2, 2, 2)
+
+-- forced properties of the unique survivor (none used as filters) --
+  two-sided identity                  : [2]   (recorded: I = 2)
+  sigma = (nu<->E, I fixed) is autom. : True
+  Latin square (+assoc+id => group)   : True
+  E.E = nu                            : True
+  nu.E = E.nu = I                     : True
+
+-- |Omega| = 2 exclusion (carrier {nu, E}, nu.nu = E pinned) --
+  associative 2-element tables        : 2
+  after FGA EE_ne_E    [E.E != E]                   : 0   (recorded: 0)
+  after FGA left_act   [all x: E.x != x]            : 0   (recorded: 0)
+  after FGA right_act  [all x: x.E != x]            : 0   (recorded: 0)
+  after FGA two_sided  [all x: E.x!=x and x.E!=x]   : 0   (recorded: 0)
