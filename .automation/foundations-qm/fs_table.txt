@@ -1,0 +1,11 @@
+group/irrep   nu  type          commutant      J-structures in commutant
+-----------------------------------------------------------------------------------------------
+Z3,  k=1    -0.0  C complex     C (dim 2)      exactly {+J, -J}  (canonical pair)
+Z4,  k=1    +0.0  C complex     C (dim 2)      exactly {+J, -J}  (canonical pair)
+Z5,  k=1    -0.0  C complex     C (dim 2)      exactly {+J, -J}  (canonical pair)
+Z5,  k=2    -0.0  C complex     C (dim 2)      exactly {+J, -J}  (canonical pair)
+D4, 2dim    +1.0  R real        R (dim 1)      none (commutant = R; a^2 = -1 unsolvable)
+D5, 2dim    +1.0  R real        R (dim 1)      none (commutant = R; a^2 = -1 unsolvable)
+Q8, 2dim    -1.0  H quaternionic H (dim 4)      2-sphere of J's (quaternionic; no canonical choice)
+-----------------------------------------------------------------------------------------------
+Trichotomy: R -> no J;  C -> canonical +/-J;  H -> continuum of J's, none canonical.
