@@ -1,8 +1,9 @@
 # Put the status board on your phone (Cloudflare Pages, private)
 
 You publish one file — `status.html` (the derived board), never the ledgers — to a
-Cloudflare Pages URL, then lock it to your email with Cloudflare Access. The 5-hourly
-cycle refreshes `status.html`; you re-run the deploy to push the latest to your phone.
+Cloudflare Pages URL, then lock it to your email with Cloudflare Access. The Stage-0 gate task
+(`reversible-contact-stage0-gate`, Windows Task Scheduler, every 5 hours, deterministic - no model)
+refreshes `status.html`; you re-run the deploy to push the latest to your phone.
 
 ## One-time setup (~10 min)
 
@@ -38,7 +39,8 @@ Until you do this, the URL is reachable by anyone who has it. Lock it down:
 
 ## Refreshing the phone view later
 
-- The scheduled cycle rewrites `status.html` every 5 hours; editing `priorities.md` and
+- The Stage-0 gate task rewrites `status.html` every 5 hours (pure script, zero model tokens);
+  the old 5-hourly Dispatch cycle is retired. Editing `priorities.md` and
   rerunning `python Scripts/status_page.py` also refreshes it.
 - To push the latest to your phone URL, double-click **`deploy_status.bat`** again.
 

@@ -1,0 +1,158 @@
+{
+  "generated_at_head": "5960054 2026-07-06 23:53",
+  "canonical": {
+    "Mathematics": "Ledger A frozen v0.7 canonical",
+    "Protocol": "Ledger B frozen v0.5; testing, not extension",
+    "Correspondence": "empty by design; admitted=0; candidate queue: 2 (unadmitted)",
+    "Ontology": "open-empty-allowed",
+    "EvidenceLog": "active-append-only",
+    "Journal": "separate-companion",
+    "Publication": "not-started"
+  },
+  "checks": "ALL TIER-1 CHECKS PASS",
+  "working_tree_clean": false,
+  "readiness": {
+    "Mathematics": "not ready: 3 conjecture(s), 7 open",
+    "Publication": "not ready: 8 item(s) awaiting human action"
+  },
+  "open_blockers": [
+    {
+      "id": "Q-R1-GENERAL",
+      "next_action": "Pratyush: promote to theorem or decline (audit complete, text patched, dual-agent accept)."
+    },
+    {
+      "id": "Q-D5-BOUNDARY",
+      "next_action": "Ratify the general partial-bijection argument together with the R1 audit."
+    },
+    {
+      "id": "Q-D5-STRUCTURE-GENERAL",
+      "next_action": "Prove for arbitrary finite state sets (the R1-style relational argument is the natural route) or extend computation; ratification is Tier-3."
+    },
+    {
+      "id": "Q-R2-BAND",
+      "next_action": "Pratyush ratifies or declines (Tier-3)."
+    },
+    {
+      "id": "Q-R3-R8",
+      "next_action": "Relay the R3-R8 statements (and/or ledger_a_verify.py); reconcile as a new dated snapshot."
+    },
+    {
+      "id": "Q-DIFF",
+      "next_action": "Relay ledger_a_verify.py; run the diff; deposit a new dated reconciliation note."
+    },
+    {
+      "id": "Q-P1",
+      "next_action": "None; held. Any content is Tier-3."
+    },
+    {
+      "id": "Q-GOV-V2-FREEZE",
+      "next_action": "Pratyush signs or declines the v2 freeze. On signature, TWO separate milestones get their own event-time packets: (1) 'ratified - decision complete'; (2) 'enforcement ACTIVE' only after the guarded validator demonstrably rejects an unauthorized core edit post-ratification. Then: restart mathematics (n=4 completion, null packaging, R1 decision)."
+    }
+  ],
+  "verified_computations": {
+    "feq-free-n2": "37 of 56 nondeterministic (cross-confirmed)",
+    "feq-free-n3": "4087 of 4400 nondeterministic (cross-confirmed)",
+    "feq-subid-n2": "0 of 7 nondeterministic (builder-only)",
+    "feq-subid-n3": "0 of 34 nondeterministic (builder-only)",
+    "feq-strict-n2": "0 of 2 nondeterministic (cross-confirmed)",
+    "feq-strict-n3": "0 of 6 nondeterministic (builder-only)",
+    "fsup-free-n2": "2095 of 3994 nondeterministic (builder-only)",
+    "fsub-free-n2": "660 of 679 nondeterministic (builder-only)"
+  },
+  "reproduction_bands": {
+    "cross-confirmed": [
+      "feq-free-n2: 37 of 56 nondeterministic",
+      "feq-free-n3: 4087 of 4400 nondeterministic",
+      "feq-strict-n2: 0 of 2 nondeterministic"
+    ],
+    "builder-only": [
+      "feq-subid-n2: 0 of 7 nondeterministic",
+      "feq-subid-n3: 0 of 34 nondeterministic",
+      "feq-strict-n3: 0 of 6 nondeterministic",
+      "fsup-free-n2: 2095 of 3994 nondeterministic",
+      "fsub-free-n2: 660 of 679 nondeterministic"
+    ]
+  },
+  "destroy_attempts_outstanding": [
+    {
+      "id": "Q-R1-GENERAL",
+      "state": "conjecture",
+      "attempts": [
+        "a nondeterministic counterexample satisfying F-eq + strict identity effects at any cardinality",
+        "a defect found in the recorded 5-line proof"
+      ]
+    },
+    {
+      "id": "Q-D5-BOUNDARY",
+      "state": "conjecture",
+      "attempts": [
+        "a nondeterministic F-eq survivor with sub-diagonal identity effects at any n",
+        "count mismatch vs sum C(n,k)^2 k! at any tested n"
+      ]
+    },
+    {
+      "id": "Q-D5-STRUCTURE-GENERAL",
+      "state": "open",
+      "attempts": [
+        "a counterexample state-set where survivors fail the monoid/group laws"
+      ]
+    },
+    {
+      "id": "Q-S4-SCALE",
+      "state": "open",
+      "attempts": [
+        "mooted if Q-R1-GENERAL is ratified"
+      ]
+    },
+    {
+      "id": "Q-R2-BAND",
+      "state": "conjecture",
+      "attempts": [
+        "a defect in the recorded one-line general arguments",
+        "a countermodel to a free half at any cardinality"
+      ]
+    },
+    {
+      "id": "Q-DIFF",
+      "state": "open",
+      "attempts": [
+        "any count mismatch reopens the affected reconciliation as a new dated note"
+      ]
+    },
+    {
+      "id": "Q-GOV-V2-FREEZE",
+      "state": "open",
+      "attempts": [
+        "execution evidence demanding a governance change arrives before ratification"
+      ]
+    }
+  ],
+  "ledgerE_recent": [
+    {
+      "date": "2026-07-06",
+      "artifact": "Reader-interface candidate re-classified (split)",
+      "disposition": "PRINCIPLE ACCEPTED (projection layer) / UI DEFERRED"
+    },
+    {
+      "date": "2026-07-06",
+      "artifact": "Provenance block + staged reproduction package",
+      "disposition": "STAGED, HANDOFF-READY"
+    },
+    {
+      "date": "2026-07-06",
+      "artifact": "Provenance richer schema + private-verify deploy staging",
+      "disposition": "LEVEL-3 RECORDED / DEPLOY STAGED"
+    },
+    {
+      "date": "2026-07-06",
+      "artifact": "Consolidation capture (thread-final)",
+      "disposition": "CONSOLIDATION-COMPLETE"
+    },
+    {
+      "date": "2026-07-07",
+      "artifact": "Framework Context Map + v2.1 change-set",
+      "disposition": "CANDIDATES LOGGED, NOTHING ADOPTED"
+    }
+  ],
+  "validator_catches": "introduced-date + catches-to-date: ledgerE-6-field-schema (07-04, 1: pipe-broken row); dangling-ref (07-04, 1 genuine: unlisted external validate.py; +3 scope-refinement fires at introduction); arch-label-sync (07-04, 2: stale Ledger-B v0.4 label at introduction; then caught the v0.5->v0.6 bump leaving ARCHITECTURE.md stale, same day); felt-register, conjecture-cite-band, withdrawn-cite, counts-coherence, registry-schema (07-04, 0 catches so far)"
+}

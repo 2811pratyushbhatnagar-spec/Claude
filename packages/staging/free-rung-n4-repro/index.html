@@ -1,0 +1,180 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>free-rung n&le;4 reproduction (private verify)</title>
+<style>body{font:15px/1.5 system-ui;margin:2rem auto;max-width:56rem;padding:0 1rem;color:#222}
+pre{white-space:pre-wrap;background:#f6f6f6;padding:1rem;border-radius:8px;overflow-x:auto}
+.tag{background:#fff3cd;border:1px solid #ffe08a;padding:.5rem 1rem;border-radius:8px;margin-bottom:1rem}
+a{color:#0b5394}</style></head><body>
+<div class=tag><strong>PRIVATE VERIFY — not published.</strong> Read-only projection of recorded
+status; displays status, never confers it. Result register: finite exhaustive computation,
+independence <strong>Level 3 (independent model + implementation), NOT blind</strong>.</div>
+<h2>Files</h2><ul>
+<li><a href="free_rung_repro_B.py">free_rung_repro_B.py</a> — runnable Implementation B</li>
+<li><a href="FREE-RUNG-REPRODUCTION-2026-07-06.md">evidence object + provenance (raw markdown)</a></li>
+<li><a href="package_manifest.json">package_manifest.json</a> — SHA-256 + source commit</li></ul>
+<h2>Four-question first page</h2><pre># Reproduction Package (STAGED, NOT PUBLISHED): the FREE-rung survivor counts, n ≤ 4
+
+*This package is a read-only, hash-signed rendering of results and their ACTUAL recorded status.
+It displays status; it never confers it. Reading this — even reproducing it — certifies nothing;
+the project&#x27;s irreversible acts (promotion, admission, freezing, publication) are explicit named
+endorsements made only by its steward. The one intended outcome of reading is understanding.*
+
+## 1. What is claimed
+For the pair groupoid with effect-assignments satisfying the eight functoriality equations
+(composite effect = composed effects), with identity effects **unconstrained** (&quot;FREE&quot; regime),
+the number of surviving assignments — equivalently, pairs (F, G) of binary relations with
+FGF = F and GFG = G, identity effects then forced to FG and GF — is, **as a finite exhaustive
+computation, independently corroborated by two implementations**:
+
+| n (state-set size) | survivors | of which nondeterministic |
+|---|---|---|
+| 2 | 56 | 37 |
+| 3 | 4,400 | 4,087 |
+| 4 | **992,696** | **984,279** |
+
+Corroborating cross-checks in the same computation: strict regime 2 / 6 / 24 = n!; sub-identity
+regime 7 / 34 / 209 = Σₖ C(n,k)²k!; and at n=4 the return-halves corollary (RET-∃ ∧ RET-! = the
+24-element strict core, under both inclusion theories).
+
+## 2. What is NOT claimed
+- **No general theorem is claimed by this package.** The related general statement (R1: strict
+  regime forces bijective dynamics at every cardinality) has an audited proof text carried
+  elsewhere with status *conjecture, promotion pending human ratification* — finite agreement at
+  n ≤ 4 is not a proof of it and must not be read as one.
+- **No physics, no interpretation, no ontology.** These are counts about a finite algebraic
+  structure. Nothing here maps to a physical quantity; the project&#x27;s own records hold that no
+  such mapping is forced.
+- Two n=4 side-quantities (F-sup 177,347; F-sub 423,054,463) are **single-source** and await
+  their own reproduction — displayed as such, not as corroborated.
+
+## 3. What evidence supports it
+- `FREE-RUNG-REPRODUCTION-2026-07-06.md` — the two-implementation comparison object with the
+  first-party **independent-derivation provenance block** (shared reduction: No; shared
+  implementation: No; independent code: Yes; the single recorded limitation: non-literal
+  blindness, documented rather than laundered).
+- `free_rung_repro_B.py` — Implementation B, complete and self-contained: the reduction is
+  re-derived in its header as a claim and validated against a RAW four-relation enumeration at
+  n=2 (exact survivor-set agreement), then run at n=3, 4 with boolean-matrix semantics.
+- Implementation A (independent origin, different representation) reported the same n=4 count
+  before B ran; A&#x27;s code was deliberately not read by B&#x27;s author.
+
+## 4. How to reproduce — or challenge — it
+**Reproduce** (Python 3 + numpy):
+```
+python free_rung_repro_B.py small   # raw n=2 ground truth + reduction validation + n=2,3  (~1 min)
+python free_rung_repro_B.py 4      # full n=4 sweep                                       (~30 min)
+```
+Expected: raw n=2 = 56 with exact set-agreement; RESULT_N4 line with free=992696,
+free_nondet=984279, strict_xcheck=24, partial_xcheck=209.
+
+**Challenge** (what would change the status):
+- Write your own enumerator from §1&#x27;s definition WITHOUT the FGF/GFG reduction (raw four-relation
+  route) at any n — a divergent count at the first divergent n is a finding; report it rather
+  than reconciling it away.
+- Attack the reduction claim itself (header of `free_rung_repro_B.py`): a pair (F,G) satisfying
+  the 8 equations whose identity effects are NOT FG/GF, or vice versa, would break it.
+- Check the nondeterminism classification against its pinned definition (some effect among
+  E0, E1, F, G not single-valued); the count under the narrower F-only reading differs by design.
+
+`package_manifest.json` carries SHA-256 hashes of every file here plus the source-repo commit.
+</pre>
+<h2>Evidence object (verbatim)</h2><pre># FREE-Rung Independent Reproduction — A vs B comparison object (permanent evidence; Class-C)
+
+**Target:** the FREE (nondeterministic-rung) survivor counts — the one place in the n≤4 concordance
+that was single-source. STRICT (2/6/24) and PARTIAL (7/34/209) were already multiply-checked with
+blind n=4 prediction (see R1-AUDIT-REPORT-2026-07-05.md); the FREE rung is where R1&#x27;s content and
+the modeling risk live.
+
+## Independence achieved (and its honest limits)
+- **Reduction independently re-derived** as a claim (see header of `free_rung_repro_B.py`): the 8
+  F-eq equations ⟺ {FGF=F, GFG=G} with E0=FG, E1=GF forced — chain of relation-algebra
+  equivalences, with eq1/eq2 (idempotence) shown IMPLIED, not assumed.
+- **RAW four-relation functor validation at n=2:** all four effects enumerated freely (65,536
+  assignments), all 8 equations imposed directly, NO reduction. Result: 56 survivors, and the
+  survivor (F,G) SETS — not just counts — exactly equal the reduction route&#x27;s. The modeling is
+  validated at ground-truth level; the reduction earns its use at n=3,4 by this agreement.
+- **Representation-independent enumerator:** boolean matrix semantics (numpy uint8 matmul),
+  vectorized over all G per F; shares no code, data structures, or algorithmic shape with
+  Implementation A (`r1_ladder_n4.py`, unread) or the repo&#x27;s bit-row-table harnesses.
+- **Blindness caveat (register honesty):** literal blindness was compromised — the directive
+  itself disclosed A&#x27;s n=4 value, and FREE n=2/n=3 were computed in this repo earlier (same
+  reduction as A, different code). What B adds is therefore NOT blind recomputation but
+  reduction-independence (raw-validated) + representation-independence. The n=4 run was committed
+  before comparison as protocol hygiene.
+
+## The comparison
+
+| Quantity | Impl. A (regular-pair route, claude.ai chat) | repo bit-table route (BF-1, same reduction as A) | **Impl. B (raw-validated + matrix route)** | Verdict |
+|---|---|---|---|---|
+| FREE n=2 (of 65,536-space) | 56 | 56 / 37 nondet | **56 / 37 nondet; RAW ground truth: 56, identical sets** | CORROBORATED (incl. raw) |
+| FREE n=3 | 4400 | 4400 / 4087 nondet | **4400 / 4087 nondet** | **INDEPENDENTLY CORROBORATED** |
+| FREE n=4 | 992,696 | in progress (7.7% at completion of B) | **992,696 — 984,279 of 992,696 nondeterministic (8,417 deterministic); 1815 s full sweep** | **MATCH — INDEPENDENTLY CORROBORATED** |
+| strict n=2/3/4 (cross-check) | 2 / 6 / 24 | 2 / 6 / (partial run) | **2 / 6 / 24 = 4!** | concordant — n=4 now THIRD-source |
+| partial n=2/3/4 (cross-check) | 7 / 34 / 209 | 7 / 34 / (partial run) | **7 / 34 / 209 = ΣC(4,k)²k!** | concordant — n=4 now THIRD-source |
+| F-sup strict n=2/3/4 (+RET-∃) | 49 / 1650 (2 / 6) | 49 / 1650 (2 / 6) | 49 / 1650 / **177,347** (2 / 6 / **24**) | n≤3 concordant; n=4 NEW (single-source B) |
+| F-sub strict n=2/3/4 (+RET-!) | 31 / 25057 (2 / 6) | 31 / 25057 (2 / 6) | 31 / 25057 / **423,054,463** (2 / 6 / **24**) | n≤3 concordant; n=4 NEW (single-source B) |
+
+## Outcome (2026-07-06, blind commit then compare)
+**A and B AGREE on every shared quantity at n=2, 3, 4.** The FREE rung — previously single-source —
+is now corroborated across two independently-derived reductions, two representations (bit-row
+tables / boolean matrices), and a raw-functor ground truth at n=2. Nondeterminism fraction trend:
+37 of 56 (n=2) → 4087 of 4400 (n=3) → **984,279 of 992,696 (n=4, ≈99.2%)** — monotone, as expected.
+**Unplanned n=4 confirmation of Proposition R2&#x27;s corollary:** RET-∃ ∧ RET-! (either inclusion
+theory) = exactly the F-eq core = **24** at n=4, both directions. The n=4 F-sup/F-sub totals
+(177,347 / 423,054,463) are NEW single-source-B numbers, banded builder-supported, awaiting their
+own reproduction before any use. n=4 numbers live HERE (audits), not in counts.json, which stays
+regression-recomputable by design.
+
+## Independent derivation provenance (first-party, exact schema)
+- **Mathematical specification provided:** the 8 F-eq equations + pair groupoid + 3 identity-effect
+  regimes (from ledger_A_canonical.md).
+- **Shared reduction provided:** **No** — re-derived as a claim, raw-validated at n=2 (exact
+  survivor sets, not just counts).
+- **Shared implementation provided:** **No** — r1_ladder_n4.py unread; matrix semantics vs
+  bit-table semantics; no shared code or algorithmic shape.
+- **Independent code written:** **Yes** (`free_rung_repro_B.py`, this directory).
+- **Result obtained before seeing expected n=4 count:** **No** — the directive itself disclosed
+  992,696, and n≤3 was pre-computed in this repo (documented here, not laundered; the run was
+  blind-committed as protocol hygiene).
+- **State classification:** **STRONG form** per the pass condition (shared-impl No + shared-reduction
+  No + independent-code Yes), with **non-literal-blindness as the single recorded limitation.**
+
+## Independent derivation provenance — richer schema (APPENDED 2026-07-06, does not overwrite the block above)
+*So &quot;was it blind?&quot; is answered by record, not memory. Filled first-party from the run artifacts
+(file mtimes, run log, commit times).*
+- **Mathematical specification supplied:** the 8 F-eq equations + pair groupoid + 3 flavor regimes
+  (ledger_A_canonical.md).
+- **Expected outputs supplied beforehand:** **YES** — the directive disclosed 992,696; FREE n≤3
+  pre-computed in this repo.
+- **Existing implementation supplied:** No (r1_ladder_n4.py unread).
+- **Existing reduction supplied:** No (re-derived as a claim + raw-validated at n=2, exact
+  survivor sets).
+- **Independent implementation written:** Yes (`free_rung_repro_B.py`, created 02:40:34 IST).
+- **First successful run timestamp:** small suite (raw n=2 ground truth + reduction n=2/n=3)
+  ≈ 2026-07-06T02:41 IST, immediately after creation, passing on first execution; full n=4 sweep
+  completed **2026-07-06T03:11:12 IST** (1814.9 s; log: `.automation/free_rung_n4_B.log`).
+- **First comparison-with-reference timestamp:** **2026-07-06T03:12–03:14 IST** (comparison on
+  reading the completed result; recorded in commit a8c13f6 at 03:14:24).
+- **Divergences encountered before comparison:** **NONE** — raw-vs-reduction agreed at the first
+  n=2 execution; all strict/partial/sup/sub cross-checks matched on first run; no code revisions
+  between first successful run and comparison.
+
+**Two independence notions, held separately:** implementation-independence = **Yes**;
+model-independence = **Yes** (reduction re-derived + raw-validated).
+**HIERARCHY CLASSIFICATION: Level 3** — independent model derivation + independent implementation
+— **NOT blind** (expected output known beforehand). *Register correction: commit a8c13f6&#x27;s message
+used the word &quot;blind&quot;; this block is the accurate record — blind-commit was protocol hygiene, not
+blindness. Do not record this result as &quot;triangulated&quot;; the genuinely-blind rerun, if requested,
+is a separate future event (fresh stream, spec only, count-bearing files off-limits, target
+withheld) and has NOT been started.*
+
+## Register (evidence only — promotion is the steward&#x27;s Class-A)
+- Finite exhaustive computation: **independently verified to n=4 iff B agrees with A** (this file
+  records the outcome either way; on mismatch, promotion freezes and the FIRST divergence is
+  investigated — a match on 209/24 with FREE divergence would mean one implementation modeled the
+  nondeterministic rung wrong).
+- General theorem: recorded proof VALID-WITH-GAPS + finiteness-not-needed per the audit — the
+  remaining work is the write-up patch already applied (v0.7) + external/human certification,
+  NOT more finite enumeration. **Finite n=4 agreement must not be read as a general-theorem proof.**
+</pre>
+</body></html>

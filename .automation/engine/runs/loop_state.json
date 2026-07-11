@@ -1,0 +1,197 @@
+{
+  "question": "Where does I(C,O,Rep,P) belong in category theory, and is the nontriviality claim known/false/open?",
+  "reps": [
+    {
+      "agent_id": "claude_A",
+      "model": "claude",
+      "evidence_path": "first-principles",
+      "mandate": "Construction",
+      "round": 1,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "closure-reading-holds-only-under-meet-closure",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "uniform-nontriviality-open",
+        "home-enriched-CT-and-topos"
+      ]
+    },
+    {
+      "agent_id": "claude_B",
+      "model": "claude",
+      "evidence_path": "counterexample",
+      "mandate": "Construction",
+      "round": 1,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "closure-reading-holds-only-under-meet-closure",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "not uniform-nontriviality-open",
+        "cone-vs-cocone-direction-ambiguity",
+        "derived-invariants-escape-Kan"
+      ]
+    },
+    {
+      "agent_id": "claude_builder",
+      "model": "claude",
+      "evidence_path": "first-principles",
+      "mandate": "Refutation",
+      "round": 2,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "closure-reading-holds-only-under-meet-closure",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "home-is-weighted-limit-Kan",
+        "not uniform-nontriviality-open"
+      ]
+    },
+    {
+      "agent_id": "gpt_builder",
+      "model": "chatgpt",
+      "evidence_path": "literature",
+      "mandate": "Refutation",
+      "round": 2,
+      "claims": [
+        "home-broader-than-plain-weighted-limits",
+        "home-is-2-categorical-universal-construction",
+        "closure-reading-holds-only-under-meet-closure",
+        "uniform-nontriviality-open"
+      ]
+    },
+    {
+      "agent_id": "claude_integrator",
+      "model": "claude",
+      "evidence_path": "first-principles",
+      "mandate": "Integration",
+      "round": 3,
+      "claims": [
+        "open-vacuous-compatible",
+        "boundary-triviality-not-interior-triviality",
+        "interior-resists-uniform-theorem"
+      ]
+    },
+    {
+      "agent_id": "gpt_builder",
+      "model": "chatgpt",
+      "evidence_path": "literature",
+      "mandate": "Integration",
+      "round": 3,
+      "claims": [
+        "open-vacuous-compatible",
+        "boundary-cases-trivial"
+      ]
+    },
+    {
+      "agent_id": "claude_refuter",
+      "model": "claude",
+      "evidence_path": "counterexample",
+      "mandate": "Refutation",
+      "round": 4,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "closure-reading-holds-only-under-meet-closure",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible"
+      ]
+    },
+    {
+      "agent_id": "gpt_refuter",
+      "model": "chatgpt",
+      "evidence_path": "literature",
+      "mandate": "Refutation",
+      "round": 4,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "closure-reading-holds-only-under-meet-closure",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible"
+      ]
+    },
+    {
+      "agent_id": "claude_diversity",
+      "model": "claude",
+      "evidence_path": "coalgebraic",
+      "mandate": "Diversity",
+      "round": 5,
+      "claims": [
+        "observation-not-limit-when-P-is-behavioral",
+        "nonexistence-of-I-is-real",
+        "not closure-reading-holds-only-under-meet-closure",
+        "open-vacuous-compatible"
+      ]
+    },
+    {
+      "agent_id": "gpt_diversity",
+      "model": "chatgpt",
+      "evidence_path": "homotopical",
+      "mandate": "Diversity",
+      "round": 5,
+      "claims": [
+        "homotopy-coherent-dependence",
+        "home-broader-than-plain-weighted-limits",
+        "nonexistence-of-I-is-real"
+      ]
+    },
+    {
+      "agent_id": "claude_refuter_fp",
+      "model": "claude",
+      "evidence_path": "first-principles",
+      "mandate": "Refutation",
+      "round": 6,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible",
+        "not closure-reading-holds-only-under-meet-closure",
+        "closure-reframing-correct-but-not-resolving"
+      ]
+    },
+    {
+      "agent_id": "claude_refuter_ce",
+      "model": "claude",
+      "evidence_path": "counterexample",
+      "mandate": "Refutation",
+      "round": 6,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible",
+        "not closure-reading-holds-only-under-meet-closure",
+        "nontriviality-open-not-known-not-false"
+      ]
+    },
+    {
+      "agent_id": "claude_confirm",
+      "model": "claude",
+      "evidence_path": "coalgebraic",
+      "mandate": "Confirmation",
+      "round": 7,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible",
+        "closure-is-fixpoint-typed"
+      ]
+    },
+    {
+      "agent_id": "gpt_confirm",
+      "model": "chatgpt",
+      "evidence_path": "literature",
+      "mandate": "Confirmation",
+      "round": 7,
+      "claims": [
+        "nonexistence-of-I-is-real",
+        "home-broader-than-plain-weighted-limits",
+        "nontriviality-not-a-novel-theorem-per-domain",
+        "open-vacuous-compatible",
+        "closure-is-fixpoint-typed"
+      ]
+    }
+  ]
+}

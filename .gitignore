@@ -1,9 +1,9 @@
-# Derived views and runner state — regenerated, not canon
-status.html
-Scripts/.cycle_state.json
-**/__pycache__/
-*.pyc
-
-# added by automation audit (2026-07-05): catch timestamped runner state + non-canon audit dir
-Scripts/.cycle_state.*.json
-.automation/
+.wrangler/
+Scripts/.cycle_state.*
+.git.clobbered/
+__pycache__/
+.automation/bf_state.json
+.automation/run_ledger.jsonl
+.automation/gate_state.json
+.automation/escalation_brief.md
+.automation/gate_log.txt

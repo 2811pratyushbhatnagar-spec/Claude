@@ -177,6 +177,34 @@ def main():
     p.append("<h1>reversible-contact &mdash; board</h1>")
     p.append("<div class=sub>Derived read-only view of <code>priorities.md</code> + <code>status.json</code>. Not canon, not a governance act.</div>")
 
+    # --- Layer-1 "Mission Control" attention strip (Class-D view; three lines, nothing more) ---
+    try:
+        qreg = json.load(open(os.path.join(repo, "questions.json"), encoding="utf-8"))["questions"]
+        live_A = [q for q in qreg if q.get("decision_class") == "A"
+                  and q["state"] in ("open", "conjecture", "investigating")]
+        live_A.sort(key=lambda q: (q["id"] != "Q-GOV-V2-FREEZE",))  # freeze ratification first
+        nxt = live_A[0] if live_A else None
+        openq = next((q for q in qreg if q["owner"] == "auto" and q["state"] == "open"), None)
+        bf_line = ""
+        bfp = os.path.join(repo, ".automation", "bf_state.json")
+        if os.path.exists(bfp):
+            bf1 = json.load(open(bfp, encoding="utf-8"))["queue"][0]
+            bf_line = " · BF-1 n=4: %.1f%%" % (100.0 * bf1["next_F"] / bf1["space"])
+        p.append("<div class=bh><span class=t>Mission control</span></div><div class=hint>")
+        p.append("MACHINE: %s · canon <code>%s</code>%s<br>" % (
+            ("<strong style='color:#2e7d32'>GREEN</strong> (validate clean)" if clean
+             else "<strong style='color:#c62828'>RED</strong> (validate flagged)"),
+            esc((gh or chash)[:12]), esc(bf_line)))
+        if nxt:
+            p.append("NEXT HUMAN DECISION (Class A): <strong>%s</strong> — %s<br>" %
+                     (esc(nxt["id"]), esc(nxt["next_action"][:140])))
+        if openq:
+            p.append("CURRENT OPEN QUESTION: <strong>%s</strong> — %s" %
+                     (esc(openq["id"]), esc(openq["statement"][:140])))
+        p.append("</div>")
+    except Exception as e:
+        p.append("<div class=hint>mission-control strip unavailable: %s</div>" % esc(e))
+
     if p_sections:
         p.append("<div class=bh><span class=t>Priority board</span>")
         if p_updated: p.append("<span class=upd>updated " + esc(p_updated) + "</span>")

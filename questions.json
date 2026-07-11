@@ -1,0 +1,276 @@
+{
+  "_meta": {
+    "schema": [
+      "id",
+      "statement",
+      "state",
+      "evidence",
+      "band",
+      "next_action",
+      "owner",
+      "depends_on",
+      "invalidated_if",
+      "blocks"
+    ],
+    "states": [
+      "open",
+      "investigating",
+      "conjecture",
+      "theorem",
+      "withdrawn",
+      "split"
+    ],
+    "namespaces": {
+      "Q-": "registry question (must resolve to an entry in this file)",
+      "X-": "Ledger-A axiom / signature decision: X-IDEFF-STRICT = strict identity effects (A3); X-IDEFF-SUBDIAG = sub-identity variant (effects within Id); X-FUNC-EQ / X-FUNC-SUP / X-FUNC-SUB = functoriality choice (D5); X-SIG-FROZEN = frozen signature (Sigma0 + D1-D6)",
+      "C-cand-": "Ledger C candidate-queue entry: C-cand-1 = return-existence <-> always-available exit (UNADMITTED)",
+      "EXT-": "external pending material: EXT-ledger_a_verify = ledger_a_verify.py + R3-R8 statements"
+    },
+    "dependency_fields": "depends_on / invalidated_if / blocks give minimal dependency awareness: 'if X changes, what recomputes / what is affected'. No dependency graph engine; the fields ARE the graph.",
+    "governance": "Registry TRACKS lifecycle only. Transitions to 'theorem', Ledger-C admissions, and publication are Tier-3 human (Pratyush) decisions; automation may append entries and update evidence/next_action, never flip state upward.",
+    "theorem_note": "'theorem' is used only for finite-exhaustive computations already banded established-internal in Ledger A (regression-guarded); general claims never enter as 'theorem' without ratification.",
+    "created": "2026-07-04",
+    "decision_classes": "per-item decision_class field; A anchored to status.json tier3_human_only; ambiguity classifies UP; see DECISION-CLASSES.md"
+  },
+  "questions": [
+    {
+      "id": "Q-R1-GENERAL",
+      "statement": "Strict functoriality (F-eq) + strict identity effects on a groupoid force deterministic, total, bijective dynamics with both undos, at every cardinality.",
+      "state": "conjecture",
+      "evidence": "INDEPENDENT AUDIT COMPLETE (2026-07-05): 3 blinded audits + 2 blinded ChatGPT samples, unanimous VALID-WITH-GAPS - theorem TRUE, cardinality-free (finiteness not needed; equal fibers a consequence); 9 expositional gaps prescribed and PATCHED into the recorded text (v0.7); enumeration concordant across 4 independent sources incl. blind n=4 prediction (24 = 4!, 209 = sum C(4,k)^2 k!). Cross-agent status: Claude reconstructs+accepts, ChatGPT (2 samples) reconstructs+accepts -> promotion candidate. See LedgerA/audits/R1-AUDIT-REPORT-2026-07-05.md. UPDATE 2026-07-06: the FREE rung - the one single-source quantity - is now independently corroborated to n=4 (992,696; blind protocol, raw-functor modeling validation at n=2); checklist criterion 2 strengthened.",
+      "band": "proof-audited and text-patched; promotion candidate; PROMOTION PENDING Tier-3",
+      "next_action": "Pratyush: promote to theorem or decline (audit complete, text patched, dual-agent accept).",
+      "owner": "human",
+      "depends_on": [
+        "X-IDEFF-STRICT",
+        "X-FUNC-EQ",
+        "Q-D5-BOUNDARY"
+      ],
+      "invalidated_if": [
+        "a nondeterministic counterexample satisfying F-eq + strict identity effects at any cardinality",
+        "a defect found in the recorded 5-line proof"
+      ],
+      "blocks": [
+        "C-cand-1",
+        "Q-S4-SCALE"
+      ],
+      "decision_class": "A",
+      "checklist": {
+        "1_claim_stated": "yes (pre-registered in canonical ledger, register-tagged)",
+        "2_independent_reproduction": "yes (3 blinded audits + 2 blinded ChatGPT samples; 4-source enumeration concordance incl. blind n=4)",
+        "3_destroy_attempts": "partial - audit attack list exhausted vs proof and counts; per-type destroy-standard NOT yet pre-registered (checklist is DRAFT, unfrozen)",
+        "4_relation_to_existing": "partially stated (locality: any iso pair in Rel is a bijection pair - known-mathematics adjacency acknowledged); explicit extends/revises/refutes statement pending",
+        "5_survives_repo_validation": "yes (run_checks green incl. regression on all counts)",
+        "6_human_review": "PENDING - this is the Tier-3 decision itself"
+      }
+    },
+    {
+      "id": "Q-D5-BOUNDARY",
+      "statement": "The determinism collapse is governed by sub-diagonality of identity effects: strict (=Id) forces total bijections; sub-identity (within Id) forces partial bijections with identities pinned to dom/ran diagonals; free identities admit nondeterminism via non-diagonal idempotents.",
+      "state": "conjecture",
+      "evidence": "Verified exhaustively: sub-identity rung counts 7 and 34 = sum C(n,k)^2 k! exactly (= |I_n| cardinality); free rung n=2: 37 of 56 nondeterministic, n=3: 4087 of 4400 nondeterministic (counts.json feq-free-*, computed this repo, agrees with the R-series construction); general argument recorded alongside R1.",
+      "band": "searched-universe verified/refined; general form inherits R1's band",
+      "next_action": "Ratify the general partial-bijection argument together with the R1 audit.",
+      "owner": "human",
+      "depends_on": [
+        "X-IDEFF-SUBDIAG",
+        "X-FUNC-EQ"
+      ],
+      "invalidated_if": [
+        "a nondeterministic F-eq survivor with sub-diagonal identity effects at any n",
+        "count mismatch vs sum C(n,k)^2 k! at any tested n"
+      ],
+      "blocks": [
+        "Q-R1-GENERAL",
+        "Q-D5-STRUCTURE",
+        "Q-CONVERGE"
+      ],
+      "decision_class": "A"
+    },
+    {
+      "id": "Q-D5-STRUCTURE",
+      "statement": "Do the D5-ladder survivor classes realize the named structures under composition - the sub-identity survivors the symmetric inverse monoid I_n, the strict survivors the symmetric group S_n - rather than merely matching their cardinalities?",
+      "state": "split",
+      "evidence": "Structure-map check executed 2026-07-04 (completeness / converse=inversion / closure): PASS at n=2 and n=3 for both rungs. Split into Q-D5-STRUCTURE-FINITE (verified, finite-exhaustive) and Q-D5-STRUCTURE-GENERAL (open).",
+      "band": "split 2026-07-04; see the two successor entries",
+      "next_action": "None here; see Q-D5-STRUCTURE-FINITE and Q-D5-STRUCTURE-GENERAL.",
+      "owner": "auto",
+      "depends_on": [
+        "Q-D5-BOUNDARY",
+        "X-FUNC-EQ"
+      ],
+      "invalidated_if": [
+        "survivor composition fails closure or the monoid/group laws"
+      ],
+      "blocks": [],
+      "decision_class": "D"
+    },
+    {
+      "id": "Q-D5-STRUCTURE-FINITE",
+      "statement": "For n=2 and n=3, the surviving effect structures are isomorphic to the symmetric inverse monoid I_n (sub-identity rung) and the symmetric group S_n (strict rung) under the tested encoding.",
+      "state": "theorem",
+      "evidence": "Structure-map check (2026-07-04), all three sub-checks pass at both scales and both rungs: every partial bijection / permutation appears exactly once; relational converse matches inversion; encoded set closed under composition. Regression-guarded in tests/test_regression.py.",
+      "band": "established exhaustively at n=2,3 under the tested encoding (internal computation, builder-supported)",
+      "next_action": "None; monitored by regression.",
+      "owner": "auto",
+      "depends_on": [
+        "Q-D5-BOUNDARY",
+        "X-FUNC-EQ"
+      ],
+      "invalidated_if": [
+        "regression failure of any structure-map sub-check"
+      ],
+      "blocks": [],
+      "decision_class": "D"
+    },
+    {
+      "id": "Q-D5-STRUCTURE-GENERAL",
+      "statement": "Under the D5 sub-identity axiom, the survivors are the symmetric inverse monoid (and, under strict identities, the symmetric group) for arbitrary finite state sets.",
+      "state": "open",
+      "evidence": "Finite pattern verified at n=2,3 (Q-D5-STRUCTURE-FINITE); no general proof recorded.",
+      "band": "open; needs proof or broader computation; not usable as an input elsewhere until it closes",
+      "next_action": "Prove for arbitrary finite state sets (the R1-style relational argument is the natural route) or extend computation; ratification is Tier-3.",
+      "owner": "human",
+      "depends_on": [
+        "Q-D5-STRUCTURE-FINITE",
+        "Q-D5-BOUNDARY"
+      ],
+      "invalidated_if": [
+        "a counterexample state-set where survivors fail the monoid/group laws"
+      ],
+      "blocks": [],
+      "decision_class": "A"
+    },
+    {
+      "id": "Q-S3-REPLICATION",
+      "statement": "R1/R2 patterns replicate at |S|=3 (pruned enumeration, identities pinned).",
+      "state": "theorem",
+      "evidence": "Exhaustive 262,144-pair enumeration: F-eq survivors 6 = 3!; F-sup 1650 (RET-! free, RET-E 6); F-sub 25057 (RET-E free, RET-! 6). Regression-guarded in tests/test_regression.py.",
+      "band": "established exhaustively (internal computation)",
+      "next_action": "None; monitored by regression.",
+      "owner": "auto",
+      "depends_on": [
+        "X-IDEFF-STRICT",
+        "X-FUNC-EQ"
+      ],
+      "invalidated_if": [
+        "regression failure of the 262,144-space counts"
+      ],
+      "blocks": [],
+      "decision_class": "D"
+    },
+    {
+      "id": "Q-S4-SCALE",
+      "statement": "Do the R1/R2 patterns persist at |S|>=4?",
+      "state": "open",
+      "evidence": "ANSWERED AT n=4 (2026-07-06): strict 24 = 4! and partial 209 (now THIRD-source: audit enumerators + Impl B); FREE rung 992,696 survivors (984,279 nondeterministic) - INDEPENDENTLY CORROBORATED (Impl A regular-pair route + Impl B raw-validated matrix route, blind commit; LedgerA/audits/FREE-RUNG-REPRODUCTION-2026-07-06.md); R2 corollary holds at n=4 (RET-existence AND RET-exclusivity = the 24-element F-eq core, both inclusion directions); NEW single-source: F-sup 177,347 / F-sub 423,054,463 at n=4.",
+      "band": "n=4 fully answered (free rung independently corroborated; R1/R2 patterns persist); n>=5 mooted if R1 promoted (audit: cardinality-free)",
+      "next_action": "None at n=4. n>=5 only if R1 promotion is declined; else close as mooted.",
+      "owner": "auto",
+      "depends_on": [
+        "Q-R1-GENERAL"
+      ],
+      "invalidated_if": [
+        "mooted if Q-R1-GENERAL is ratified"
+      ],
+      "blocks": [],
+      "decision_class": "C"
+    },
+    {
+      "id": "Q-R2-BAND",
+      "statement": "Upgrade Proposition R2 to proved-internal: the free halves admit one-line general proofs; the underivability halves are established generally by the finite countermodels.",
+      "state": "conjecture",
+      "evidence": "Both arguments recorded in LedgerA/ledger_A_canonical.md, Proposition R2 (band note); promotion explicitly HELD per governance firewall.",
+      "band": "searched-universe established; upgrade recorded and held",
+      "next_action": "Pratyush ratifies or declines (Tier-3).",
+      "owner": "human",
+      "depends_on": [
+        "X-IDEFF-STRICT",
+        "X-FUNC-SUP",
+        "X-FUNC-SUB"
+      ],
+      "invalidated_if": [
+        "a defect in the recorded one-line general arguments",
+        "a countermodel to a free half at any cardinality"
+      ],
+      "blocks": [],
+      "decision_class": "A"
+    },
+    {
+      "id": "Q-R3-R8",
+      "statement": "Reconcile results R3-R8 of the parallel R-series construction against the canonical ledger.",
+      "state": "open",
+      "evidence": "Statements not on disk; Ledger E (2026-07-04) records 'results R1-R8' exist on the chat side.",
+      "band": "pending material",
+      "next_action": "Relay the R3-R8 statements (and/or ledger_a_verify.py); reconcile as a new dated snapshot.",
+      "owner": "human",
+      "depends_on": [
+        "EXT-ledger_a_verify"
+      ],
+      "invalidated_if": [],
+      "blocks": [],
+      "decision_class": "B"
+    },
+    {
+      "id": "Q-DIFF",
+      "statement": "Exact-number diff of the independent reproduction against ledger_a_verify.py.",
+      "state": "open",
+      "evidence": "My counts frozen in reconciliation/reconciliation_2026-07-04.md as diff targets; full agreement on the three shared findings. Partial progress: free-identity counts agree across constructions (n=2: 37 of 56; n=3: 4087 of 4400); AND the 2026-07-05 audit's from-scratch enumerators reproduced every deposited count including all RET fractions with zero discrepancies - a third independent evidence path. ledger_a_verify.py itself still absent.",
+      "band": "pending material",
+      "next_action": "Relay ledger_a_verify.py; run the diff; deposit a new dated reconciliation note.",
+      "owner": "human",
+      "depends_on": [
+        "EXT-ledger_a_verify"
+      ],
+      "invalidated_if": [
+        "any count mismatch reopens the affected reconciliation as a new dated note"
+      ],
+      "blocks": [],
+      "decision_class": "B"
+    },
+    {
+      "id": "Q-P1",
+      "statement": "Does there exist an object P1 and maps P1 -> P2, collective(P2) -> P1 such that a meaningful closure holds?",
+      "state": "open",
+      "evidence": "Question schema only; two readings sorted (structural -> a Ledger-A question; ground -> the frozen selection boundary). Ledger D.",
+      "band": "question schema; allowed empty indefinitely",
+      "next_action": "None; held. Any content is Tier-3.",
+      "owner": "human",
+      "depends_on": [],
+      "invalidated_if": [],
+      "blocks": [],
+      "decision_class": "A"
+    },
+    {
+      "id": "Q-CONVERGE",
+      "statement": "Do composed reversible contacts converge, and to what invariant?",
+      "state": "open",
+      "evidence": "None yet; Ledger-A next-round candidate.",
+      "band": "unexplored",
+      "next_action": "Formulate iteration/composition semantics on the frozen signature; then a finite-model probe.",
+      "owner": "auto",
+      "depends_on": [
+        "X-SIG-FROZEN",
+        "Q-D5-BOUNDARY"
+      ],
+      "invalidated_if": [],
+      "blocks": [],
+      "decision_class": "C"
+    },
+    {
+      "id": "Q-GOV-V2-FREEZE",
+      "statement": "Ratify the Governance v2 constitutional freeze: stopping rule (governance reopens only on pre-registered execution-evidence signals) + closed constitutional core (incl. the router).",
+      "state": "open",
+      "evidence": "All v2 machinery implemented and green as Class-B (constitutional core root-of-trust, negative-tested; observation schema pre-registered; token gates; sensors wired). The freeze ACT itself is reserved: a system must not self-execute its own constitutional freeze.",
+      "band": "queued Class-A; machinery in force, freeze pending signature",
+      "next_action": "Pratyush signs or declines the v2 freeze. On signature, TWO separate milestones get their own event-time packets: (1) 'ratified - decision complete'; (2) 'enforcement ACTIVE' only after the guarded validator demonstrably rejects an unauthorized core edit post-ratification. Then: restart mathematics (n=4 completion, null packaging, R1 decision).",
+      "owner": "human",
+      "depends_on": [],
+      "invalidated_if": [
+        "execution evidence demanding a governance change arrives before ratification"
+      ],
+      "blocks": [],
+      "decision_class": "A"
+    }
+  ]
+}

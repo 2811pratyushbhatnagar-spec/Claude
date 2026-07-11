@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "note": "Cryptographic freeze: validate.py verifies 'core' hashes FIRST (root of trust - if the core is compromised nothing downstream is trustworthy), then 'files'. Any byte change without a human-authorized re-pin FAILS validation (core changes are Class-A; Ledger A/B changes are Class-A). Baseline pin records existing state only - pinning is not a new freeze decision.",
+    "generated_at": "2026-07-11T06:22:39+05:30",
+    "authorized_by": "Pratyush - Q-GOV-V2-FREEZE ratification 2026-07-11"
+  },
+  "core": {
+    "DECISION-CLASSES.md": "f263e00b52aae4be6f7203eae76357422628cae1567b31158431358d43e76123",
+    "WORKER-CONTRACT.md": "0cc32e6b580c18ea3014502496230273296ec25ac0004bf56547ab4f7b1d6d6f",
+    "SUBSTANTIAL-RESULT-CHECKLIST-DRAFT.md": "569e00cfa714a5f73db64c2f643f18beb5a4a590ef70cd3fe3e88110bf8ce0fc",
+    "validate.py": "171165879e731c0c66e43426f5622a994fe311cae25127df3f1682af8a2e9091",
+    "Scripts/worker_guard.py": "00db4a264a73cd12333da55fa40da5d0381602e16487a648f086973e57ccf05b",
+    "Scripts/cycle_check.py": "831facf0d4a7a7c6beeefe1c4c842da6ed8494586feacedb09b829df44ee3174",
+    "Scripts/stage0_gate.py": "21821beebac9e67ae4c247252a802460e90a59995bda2aa3e8c95274f91234b3",
+    "DEPENDENCIES.json": "0d4ccda5e353ba99f58685991a9f54a2cd1041ab0ff17f458385969b4588731a",
+    "GOVERNANCE-VERSION.json": "0fdca31a18fc8caa0862eac410ac0bdbc6a40a4c5d6755398ca51b3f4c54b028"
+  },
+  "files": {
+    "LedgerA/ledger_A_canonical.md": "4d040eda3386737ed8176dc9e05ec6fd71eeb8960133596d4e863c01b63e2a2e",
+    "LedgerA/archive/ledger_A_math_v0.1_frozen.md": "cc1cf6e3f93aaa088188066d7c2f607f1ba11365f166fb0f0f85fb9d22eb3677",
+    "LedgerA/archive/ledger_A_math_v0.2_canonical.md": "41b14cc722998e7a17a1e1df20edd925ee564144a3806744d693923eed95cefd",
+    "LedgerB/protocol_ledger.md": "5b03dc71d5696e111b5931a02e98ceb85f7aa6cb63d36e2a9ec26b47f96e4cb4",
+    "LedgerB/kernel.md": "0f4c1ba547e27817b4fdf46d6587336d698a996fdd93f37d87ba084e997a35a0",
+    "reconciliation/reconciliation_2026-07-04.md": "91d09308927440acf074f3b01421efb47a4acd32bc7113b3ca1340407fd758c5",
+    "protocols/README.md": "c4b8edcf005dc10e46b0ed01d8a321d2d49fcc656f26b5ca81bf7a94a40398cd"
+  }
+}

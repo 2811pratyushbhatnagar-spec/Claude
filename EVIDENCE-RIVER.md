@@ -1,0 +1,72 @@
+# EVIDENCE RIVER — Ledger E as a timeline · Class-D generated view (regenerate: `python snapshot.py`; canonical record: `LedgerE/evidence_log.md`)
+
+*A semantic, chronological read of what already happened. Append-only source; this view*
+*adds nothing and certifies nothing.*
+
+- **2026-07-04** · MSF: K(e)=D(e), odd primes — *verified* → **ESTABLISHED (one open verification)**
+  - KR Thm 1 read is relayed, not first-party; a human read closes it
+- **2026-07-04** · O-conjecture (one object generates all recovered results) — *attacked* → **WITHDRAWN**
+  - failed all three; residue reframed as a dependency-graph question
+- <small>2026-07-04 · Object-search: navigability = reversible contact? — investigated → PARTIAL</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Enrichment-attack on the selection remainder — falsification program → STRONG FORM FALSIFIED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · "Deflation is entailed / nothing there" — corrected → CORRECTED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · capture = attractor (dynamical reading) — corrected → CORRECTED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Semantic-closure ↔ Tarski undefinability — walked back → DEMOTED TO ANALOGY</small> *(infra, backgrounded)*
+- **2026-07-04** · "Universe as must/may object" (physics) — *audited* → **NOT ADMITTED (register 2)**
+  - generic to all physics; no truth-maker; inherits selection remainder = measurement problem; nothing forced; physics ledger stays empty
+- <small>2026-07-04 · Ledger A v0.1 — frozen → FROZEN (superseded same day)</small> *(infra, backgrounded)*
+- <small>2026-07-04 · "stack-like locality" in class statement — removed → REMOVED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Ledger B v0.5 — frozen → FROZEN</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Symmetry Condition + six-condition Self-Application variant — demoted → TESTING HYPOTHESES</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Ledger C — held empty → EMPTY (success, not gap)</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Ledger D / P1 — held open → OPEN, ALLOWED EMPTY</small> *(infra, backgrounded)*
+- **2026-07-04** · Round-2 (R1 general, D5 variant, n=3) — *executed* → **VERIFIED (R1 general: conjecture-grade pending audit)**
+  - governance band applied: searched-universe established; candidate proof pending independent audit
+- <small>2026-07-04 · Reconciliation of parallel Ledger-A efforts — frozen snapshot → FROZEN</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Ledger A v0.3 canonical — frozen → FROZEN CANONICAL</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Ledger E schema — converted → CONVERTED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Canonical repo (framework/) — stood up → ACTIVE</small> *(infra, backgrounded)*
+- <small>2026-07-05 · [imported from mounted-repo Ledger E] Ledger A v0.2 adopted into mounted repo — adopted there → RECORD</small> *(infra, backgrounded)*
+- <small>2026-07-05 · [imported] validate.py historical-layer exemption — tooling change there → RECORD</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Governance update received (Pratyush stepping back) — recorded → IN FORCE</small> *(infra, backgrounded)*
+- **2026-07-05** · R1 independent audit — *received into canon* → **EVIDENCE RECORDED**
+  - audit artifacts deposited at LedgerA/audits/; NO promotion taken (Tier-3)
+- **2026-07-05** · Theorem R1 proof text — *patched (v0.7)* → **PATCHED, promotion NOT taken**
+  - dual-agreement rule: procedural (patches prescribed verbatim by audit + ChatGPT samples), reversible (git); FINAL REMARK below
+- **2026-07-06** · FREE-rung n=4 independent reproduction (Implementation B) — *executed blind, then compared* → **INDEPENDENTLY CORROBORATED to n=4 (evidence object: LedgerA/audits/FREE-RUNG-REPRODUCTION-2026-07-06.md)**
+  - REGISTER: finite exhaustive computation independently verified to n=4; general theorem = recorded proof VALID-WITH-GAPS + finiteness-not-needed per audit - remaining work is external/human certification, NOT more finite 
+- <small>2026-07-06 · Read-model + packaging principles + river diagnostic — recorded (Class-D) → RECORDED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Enforcement demonstration (guarded-validator rejection test) — executed per steward sequence → MECHANISM DEMONSTRATED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Stage-0 deterministic gate (THE router) stood up — replaces both old 5h automations → IN FORCE</small> *(infra, backgrounded)*
+- <small>2026-07-06 · v2 freeze consequences + minimal UI (Class-B/D) — folded in → IN FORCE / DEFERRED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · v2 final additions (Class-B) + freeze-act correction — implemented, queued → IN FORCE (machinery); FREEZE QUEUED CLASS-A</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Governance v1.2 mechanizations (Class-B) — implemented, queued → IN FORCE, review queued</small> *(infra, backgrounded)*
+- <small>2026-07-06 · GOVERNANCE v2.0 - CONSTITUTIONAL FREEZE (Class-B, the LAST) — implemented, queued → FROZEN</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Governance refinements v1.1 (Class-B change) — implemented, queued for batch review → IN FORCE (Class B), review queued</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Decision classes A-D (Class-B governance change) — implemented, queued for batch review → IN FORCE (Class B), review queued</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Brute-force queue BF-1..BF-5 — integrated into the research cycle → IN FORCE (band-1)</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Finite-horizon directive (Pratyush) — recorded → DIRECTIVE IN FORCE</small> *(infra, backgrounded)*
+- **2026-07-05** · Governance-selection resonance: interpretation phrasing — *corrected after ChatGPT audit* → **CORRECTED; held as resonance, not identity**
+  - ChatGPT band verdict: operational governance strong; structural correspondence = reasonable C-candidate (queued UNADMITTED as queue item 2); interpretation not established (conceded - a real catch)
+- <small>2026-07-05 · Stateless-Worker Contract v1.0 — formalized + enforced → IN FORCE (band-1)</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Canon git history clobbered and restored — detected + repaired → RESTORED</small> *(infra, backgrounded)*
+- <small>2026-07-05 · Two-repo reconciliation and unification — reconciled → UNIFIED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Question Registry + readiness view — added → ACTIVE</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Snapshot heartbeat + Decision Queue views — added → ACTIVE (generated, non-canonical)</small> *(infra, backgrounded)*
+- **2026-07-04** · Structure-map check (D5 ladder identifications) — *executed* → **FINITE VERIFIED / GENERAL OPEN**
+  - reviewer two-banding applied AFTER the check ran, per instruction; registry split Q-D5-STRUCTURE -> -FINITE (theorem, finite-exhaustive) + -GENERAL (open); canonical bumped v0.6
+- <small>2026-07-04 · Validator metrics (minimal form) — recorded → RECORDED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Drift-check: loose Ledger A files vs canonical repo — reconciled → RECONCILED</small> *(infra, backgrounded)*
+- <small>2026-07-04 · Structured counts + registry query reads — added → ACTIVE / FROZEN v0.5</small> *(infra, backgrounded)*
+- **2026-07-04** · D5 ladder + registry dependency fields + 3 honest checks — *recorded / added* → **FROZEN v0.4 / ACTIVE**
+  - owner instruction; no promotions — structure identifications stated, not asserted; comms-prep generators, stale-draft graphs, per-computation metadata deferred as expansion
+- <small>2026-07-06 · Automation trigger wiring reconciled (deployment layer) — documented + tested → WIRED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · States-of-understanding interface + Challenge Queue (design candidate) — LOGGED, NOT BUILT → DEFERRED CANDIDATE (Class-D documentation)</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Reader-interface candidate re-classified (split) — recorded → PRINCIPLE ACCEPTED (projection layer) / UI DEFERRED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Provenance block + staged reproduction package — added / staged (NOT published) → STAGED, HANDOFF-READY</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Provenance richer schema + private-verify deploy staging — appended / staged (NOT deployed) → LEVEL-3 RECORDED / DEPLOY STAGED</small> *(infra, backgrounded)*
+- <small>2026-07-06 · Consolidation capture (thread-final) — recorded / adopted / queued → CONSOLIDATION-COMPLETE</small> *(infra, backgrounded)*
+- <small>2026-07-07 · Framework Context Map + v2.1 change-set — logged as CANDIDATES (registrations only) → CANDIDATES LOGGED, NOTHING ADOPTED</small> *(infra, backgrounded)*
+
+---
+**River health (diagnostic, not target):** 10 research / 44 infrastructure events — **FLAG: machinery is the primary activity.** A healthy river reads as research (n=4 completed, counterexample not found, destroy attempt failed, null packaged). This flag is a valid observation-signal input for the governance sensor stream.

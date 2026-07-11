@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "package": "free-rung-n4-repro",
+    "status_display": "STAGED - PRIVATE VERIFY ONLY (deploy + Access lock are the steward's acts; publication remains Class-A, gated by the standing no-posting rule)",
+    "result_register": "finite exhaustive computation; independence LEVEL 3 (independent model derivation + independent implementation), NOT blind - expected output known beforehand; not to be recorded as triangulated",
+    "read_model": "read-only projection; displays recorded status, never confers it",
+    "generated_at": "2026-07-06T05:30:46+05:30",
+    "source_repo_commit": "fe3b4bd"
+  },
+  "files": {
+    "FREE-RUNG-REPRODUCTION-2026-07-06.md": "67bd19d5d45f4e2be596162be0114c3bcf6e5e425e9c759a95e2a673f1a385fc",
+    "README.md": "eeb26651d723df07ba40404ecc02a977e0a597526ec6077e5a941112e4848a1a",
+    "deploy_package.bat": "2a524e4817f914dd143a20afe6d633899508f5227030190324d6a3d5a16d1dc4",
+    "free_rung_repro_B.py": "984bdf8e272c91920f8b20a05387bd8a814128dca3201f92f8d783a0ad2391d8",
+    "index.html": "8c18f5dd9ae83a2e9d1ee065ef534e5965a366bf93c9e747be9a044fcec87b66"
+  }
+}

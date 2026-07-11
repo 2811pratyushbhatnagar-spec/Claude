@@ -1,0 +1,104 @@
+{
+  "created": "2026-07-05T22:46:52+05:30",
+  "reduction_verified": true,
+  "queue": [
+    {
+      "id": "BF-1",
+      "title": "n=4 free-rung F-eq enumeration + strict F-sup/F-sub + RET (fused pass)",
+      "status": "active",
+      "next_F": 3030,
+      "space": 65536,
+      "counts": {
+        "feq_free": 153125,
+        "feq_free_nondet": 151672,
+        "feq_strict": 0,
+        "feq_partial_proper": 73,
+        "fsup_strict": 89765,
+        "fsup_strict_retE": 0,
+        "fsub_strict": 0,
+        "fsub_strict_retX": 0,
+        "nondet_witnesses": [
+          {
+            "F": 1,
+            "G": 3
+          },
+          {
+            "F": 1,
+            "G": 5
+          },
+          {
+            "F": 1,
+            "G": 7
+          }
+        ]
+      },
+      "milestones_banked": [],
+      "chunks": 4,
+      "seconds": 579.4680000003427,
+      "cross_checks": "on completion: feq_strict must equal 24 = 4! and partial-proper must equal 209-24=185 (audit's blind-prediction values)"
+    },
+    {
+      "id": "BF-2",
+      "title": "exact-number diff vs ledger_a_verify.py",
+      "status": "pending-material",
+      "probe_paths": [
+        "C:\\Users\\Bhatnagar\\Desktop",
+        "C:\\Users\\Bhatnagar\\Desktop\\New folder (2)",
+        "C:\\Users\\Bhatnagar\\Desktop\\New folder (2)\\framework",
+        "C:\\Users\\Bhatnagar\\Desktop\\code\\framework"
+      ]
+    },
+    {
+      "id": "BF-3",
+      "title": "forced-bridge null certificate (physics bar: forced-only)",
+      "status": "active",
+      "last_horizon": "n<=3 complete (regression-guarded); n=4 strict+partial audit-verified; n=4 free rung at F=3030/65536 (4.6%)"
+    },
+    {
+      "id": "BF-4",
+      "title": "Q-CONVERGE composition-semantics probe",
+      "status": "queued-design",
+      "note": "no compute until iteration/composition semantics formulated on the frozen signature; automation-audit may draft"
+    },
+    {
+      "id": "BF-5",
+      "title": "further range extensions (automation-audit enqueues here)",
+      "status": "open-slot"
+    }
+  ],
+  "history": [
+    {
+      "t": "2026-07-05T22:47:37+05:30",
+      "log": [
+        "reduction self-test: PASS (n=2: 56/37, n=3: 4400/4087; strict sup/sub n=2 49/31, n=3 1650/25057)",
+        "BF-2: ledger_a_verify.py still absent (probed 4 paths)",
+        "BF-1 chunk 1: F=202/65536 (0.3%), 4.6 F/s, ~4.0 CPU-h remaining; interim: free=22652 (nondet 22415), strict=0, sup=76513, sub=0",
+        "BF-3: null certificate regenerated -- n<=3 complete (regression-guarded); n=4 strict+partial audit-verified; n=4 free rung at F=202/65536 (0.3%)"
+      ]
+    },
+    {
+      "t": "2026-07-05T22:48:07+05:30",
+      "log": [
+        "BF-2: ledger_a_verify.py still absent (probed 4 paths)",
+        "BF-1 chunk 2: F=351/65536 (0.5%), 4.9 F/s, ~3.7 CPU-h remaining; interim: free=36395 (nondet 35907), strict=0, sup=78531, sub=0",
+        "BF-3: null certificate regenerated -- n<=3 complete (regression-guarded); n=4 strict+partial audit-verified; n=4 free rung at F=351/65536 (0.5%)"
+      ]
+    },
+    {
+      "t": "2026-07-06T00:21:16+05:30",
+      "log": [
+        "BF-2: ledger_a_verify.py still absent (probed 4 paths)",
+        "BF-1 chunk 3: F=485/65536 (0.7%), 5.4 F/s, ~3.4 CPU-h remaining; interim: free=42725 (nondet 42184), strict=0, sup=78944, sub=0",
+        "BF-3: null certificate regenerated -- n<=3 complete (regression-guarded); n=4 strict+partial audit-verified; n=4 free rung at F=485/65536 (0.7%)"
+      ]
+    },
+    {
+      "t": "2026-07-06T02:12:08+05:30",
+      "log": [
+        "BF-2: ledger_a_verify.py still absent (probed 4 paths)",
+        "BF-1 chunk 4: F=3030/65536 (4.6%), 5.3 F/s, ~3.3 CPU-h remaining; interim: free=153125 (nondet 151672), strict=0, sup=89765, sub=0",
+        "BF-3: null certificate regenerated -- n<=3 complete (regression-guarded); n=4 strict+partial audit-verified; n=4 free rung at F=3030/65536 (4.6%)"
+      ]
+    }
+  ]
+}

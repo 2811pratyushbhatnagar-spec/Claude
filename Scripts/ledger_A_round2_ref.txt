@@ -1,0 +1,29 @@
+=== |S|=2, identities FREE (full 65,536 space) ===
+space = 65536
+F-eq: survivors=56  nondeterministic=37  ids-subdiagonal=7
+F-sup: survivors=3994  nondeterministic=2095  ids-subdiagonal=610
+F-sub: survivors=679  nondeterministic=660  ids-subdiagonal=40
+  nondet F-eq witness: {'E0': [('a', 'a')], 'E1': [('b', 'b'), ('b', 'b2')], 'F': [('a', 'b'), ('a', 'b2')], 'G': [('b', 'a')]}
+
+=== |S|=2, A3 STRICT (E=Id): R1 at small scale ===
+F-eq: survivors=2 | all det=True all total=True all inj=True | w1(existence) always=True w2(exclusivity) always=True
+F-sup: survivors=49 | all det=False all total=False all inj=False | w1(existence) always=False w2(exclusivity) always=False
+   w1 holds in 7/49
+   w2 holds in 7/49
+F-sub: survivors=31 | all det=False all total=True all inj=False | w1(existence) always=False w2(exclusivity) always=False
+   w1 holds in 7/31
+   w2 holds in 7/31
+
+=== |S|=2, PARTIAL-IDENTITY variant (E <= Id): does R1 collapse survive? ===
+space = 4096
+F-eq survivors=7 | partial bijections=7/7 | any nondet=False | any total-bij=2
+identities forced to dom/ran sub-diagonals: True
+
+=== |S|=3, A3 STRICT, prune (enumerate F,G only): R1 replication ===
+space = 262144
+F-eq: survivors=6 | all det+total+inj=True | w1 always=True w2 always=True | w1 in 6, w2 in 6
+F-sup: survivors=1650 | all det+total+inj=False | w1 always=False w2 always=False | w1 in 34, w2 in 34
+F-sub: survivors=25057 | all det+total+inj=False | w1 always=False w2 always=False | w1 in 265, w2 in 265
+
+=== |S|=3, PARTIAL-IDENTITY variant, prune to E0=dom-diag forced check ===
+F-eq (E=F;G <= Id forced): survivors=34 partial-bijections=34 nondet=0

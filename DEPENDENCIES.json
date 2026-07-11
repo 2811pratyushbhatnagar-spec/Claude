@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "note": "Versioned dependency declarations - which files each packet-producing step declares as its closure. Hash-pinned in MANIFEST.sha256.json; packets record the declaration version+hash they consumed, feeding the mechanical STALE test (a packet is STALE iff any declared-dependency hash differs from the hash recorded at emission - no judgment).",
+    "version": "1.0",
+    "updated": "2026-07-06"
+  },
+  "declarations": {
+    "brute_force_step": ["counts.json", "questions.json", "Scripts/brute_force_step.py"],
+    "promotion_proposal": ["LedgerA/ledger_A_canonical.md", "counts.json", "questions.json", "protocols/README.md"]
+  }
+}

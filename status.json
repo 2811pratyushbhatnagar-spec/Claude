@@ -1,15 +1,16 @@
 {
   "project": "reversible-contact",
-  "updated": "2026-07-05",
-  "_note": "Canonical single source of truth. Every document's stated ledger version/state must match this. validate.py enforces it. Nothing else declares status.",
+  "updated": "2026-07-11",
+  "_note": "Canonical single source of truth (unified schema adopted 2026-07-05 from the mounted repo's design — machine-readable versions + governance). Every current-state document's stated ledger version must match this; validate.py enforces it (historical layers exempt). Canonical repo: Desktop/code/framework; the mounted framework folder is a synced working mirror.",
   "ledgers": {
     "A": {
       "name": "Mathematics",
-      "version": "0.2",
+      "version": "1.0",
       "state": "frozen",
       "question": "What mathematical statements survive proof or reproducible computation?",
       "success": "formal validity and reproducibility",
-      "open": ["R1 general proof: candidate recorded, conjecture-grade pending independent audit", "exact-number diff vs ledger_a_verify.py (file absent at snapshot)", "n=4 enumeration / convergence probe"]
+      "theorems": ["R1: F-eq at inverse composites under strict identity effects forces a bijection pair (S=R^T); cardinality-free; PROMOTED 2026-07-11, Pratyush", "D5G: sub-identity rung (R;R^T subset Delta, R^T;R subset Delta, S=R^T pinned) forces R to be a partial bijection on any set X, hence I_X (standard realization); cardinality-free; PROMOTED 2026-07-11, Pratyush", "R2-free-halves: at any inverse-composite pair ab=e under strict identities, F-sup forces RET-! and F-sub forces RET-exists directly from the inclusion axiom; cardinality-free; RATIFIED 2026-07-11, Pratyush (Q-R2-BAND)"],
+      "open": ["exact-number diff vs ledger_a_verify.py (file still absent)", "R3-R8 statements pending material", "free-rung n=4", "Q-CONVERGE composition probe", "R2 bijection-core halves (RET-exists under F-sup, RET-! under F-sub) remain searched-universe grade only"]
     },
     "B": {
       "name": "Protocol",
@@ -20,11 +21,13 @@
     },
     "C": {
       "name": "Correspondence",
-      "version": "0.1",
+      "version": "0.2",
       "state": "open",
-      "admitted": 0,
+      "admitted": 1,
       "question": "Which translations are supported independently on both sides?",
-      "success": "explicit, evidence-preserving translations; empty is acceptable"
+      "success": "explicit, evidence-preserving translations; empty is acceptable",
+      "entries": ["Entry 1: RET-existence <-> Exit (availability form, quotient map); admitted 2026-07-11, Pratyush"],
+      "candidate_queue": ["governance reversible/irreversible split <-> availability/execution selection boundary (role-formulation; interchangeability admission-gate; UNADMITTED)"]
     },
     "D": {
       "name": "Ontology",
@@ -46,12 +49,25 @@
     "question": "Does this orient attention honestly without replacing evidence?",
     "success": "orientational accuracy without coercion"
   },
+  "publication": {
+    "state": "not-started",
+    "note": "a paper is judgment, not procedure; Tier-3"
+  },
   "architecture": {
     "state": "frozen-shape",
     "shape": ["A", "B", "C", "D", "E", "Journal"],
-    "invariant": "Never replace a map with an identification."
+    "invariant": "Never replace a map with an identification.",
+    "invariants": [
+      "Never replace a map with an identification.",
+      "The automation may produce, organize, and challenge evidence; it never certifies evidence.",
+      "Deterministic software decides whether AI is needed; AI never decides whether deterministic software should have run.",
+      "Budget exhaustion halts automation; it never relaxes validation."
+    ],
+    "governance_version": "2.0 (FROZEN, RATIFIED 2026-07-11 by Pratyush; reopens only on execution evidence - see GOVERNANCE-VERSION.json; manifest re-pin still needs a human-run pin_manifest.py)"
   },
   "governance": {
-    "tier3_human_only": ["admit Ledger C entry", "change Ledger B", "promote conjecture->theorem", "add ontology", "publish interpretation"]
+    "tier3_human_only": ["admit Ledger C entry", "change Ledger B", "promote conjecture->theorem", "add ontology (Ledger D / P1)", "publish or send anything", "merge a reconciliation as canonical"],
+    "dual_agreement_rule": "2026-07-05: a PROCEDURAL and REVERSIBLE step that both AIs have reviewed and agree on may proceed with a logged Ledger E final remark, queued for the steward's batch review. The tier3 list above always waits for him.",
+    "decision_classes": "A=tier3_human_only (anchored; individual review, never batched; automation may not declassify) · B=governance changes (batched with rationale) · C=evidence records (bulk, spot-checked) · D=generated artifacts (no approval if validators pass). Ambiguity classifies UP. See DECISION-CLASSES.md."
   }
 }

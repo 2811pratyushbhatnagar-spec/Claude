@@ -1,0 +1,4 @@
+Where does the construction I(C,O,Rep,P) -- the universal object satisfying a preservation
+criterion P over a specified diagram Rep of presentations of O -- belong in existing category
+theory, and is the nontriviality claim (characterise (Rep,P) with 1 < I < O; conjecture: Rep+P
+induce a closure operator whose proper fixed points <=> nontrivial I) known, false, or open?

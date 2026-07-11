@@ -1,0 +1,44 @@
+{
+  "version": "2.0",
+  "frozen": true,
+  "freeze_status": "RATIFIED 2026-07-11 - Pratyush signed (registry item Q-GOV-V2-FREEZE), decision given directly in a Cowork session. The v2 machinery (core, stopping rule, gates, sensors) is now constitutionally FROZEN and binding. Manifest re-pinned 2026-07-11 by Pratyush, run natively on his own machine (`python Scripts/pin_manifest.py --authorize \"Pratyush - Q-GOV-V2-FREEZE ratification 2026-07-11\"`; MANIFEST.sha256.json now carries authorized_by/generated_at metadata matching). Enforcement (the manifest guard demonstrably rejecting an unauthorized post-ratification edit) remains a separate, not-yet-run milestone.",
+  "stopping_rule": "Upon ratification: Governance v2 is FROZEN. No further governance proposals are admitted unless triggered by a pre-registered observation signal from execution, recorded in .automation/execution_evidence.jsonl. Governance is empirical: it changes for the same reason the mathematics does - because evidence demands it.",
+  "observation_schema": [
+    "queue-scaling",
+    "packet-sufficiency",
+    "validator-effectiveness",
+    "dependency-declaration-accuracy",
+    "automation-time-savings",
+    "token-resource-efficiency"
+  ],
+  "observation_vs_ratification": "OBSERVATION IS NOT RATIFICATION: a red-team run, demonstrated failure, or near-miss TRIGGERS REVIEW - it admits a governance proposal; the change itself still passes the normal Class-A process. A failure never auto-rewrites the rules.",
+  "constitutional_core": [
+    "DECISION-CLASSES.md",
+    "WORKER-CONTRACT.md",
+    "SUBSTANTIAL-RESULT-CHECKLIST-DRAFT.md",
+    "validate.py",
+    "Scripts/worker_guard.py",
+    "Scripts/cycle_check.py",
+    "Scripts/stage0_gate.py",
+    "DEPENDENCIES.json",
+    "GOVERNANCE-VERSION.json"
+  ],
+  "core_closure": "The core is EXPLICIT and CLOSED: class-assignment rules, validator definitions, freeze/hash mechanism, dependency schema, packet schema (in the worker contract), governance versioning, AND the gate/router (cycle_check - scripts decide whether models run, so unpinned wake logic would be a hole in the freeze). THE BOUNDARY LIST ITSELF (this constitutional_core field, in this file) IS A MEMBER OF THE CORE: the definition of what counts as constitutional sits inside the protection it defines - otherwise 'protected' could be redefined without passing through protection. Self-referential fixed point, closed as intended. Everything OUTSIDE this list evolves under normal governance; the constitutional surface must not creep. test_consistency enforces manifest-core == this list.",
+  "decision_vs_enforcement": {
+    "note": "DECISION and ENFORCEMENT are separate recorded states - never collapsed. Each milestone gets its own event-time packet when it occurs.",
+    "decision_status": "RATIFIED (decision complete) - 2026-07-11, Pratyush, direct signature in a Cowork session ('governance freeze approved'). Q-GOV-V2-FREEZE closed.",
+    "enforcement_status": "Manifest pinned to post-ratification content (re-pin 2026-07-11, authorized: Q-GOV-V2-FREEZE, run natively by Pratyush; MANIFEST.sha256.json authorized_by/generated_at recorded). Enforcement NOT yet re-verified -- a fresh guarded-validator test (run AFTER this re-pin, rejecting an unauthorized core edit) still required per this file's own design before enforcement_status can read ACTIVE. The 2026-07-06 in-session negative test (CORE COMPROMISED fired on a mutated core file) remains pre-decision, pre-repin evidence the mechanism works; it does not substitute for the fresh post-repin test."
+  },
+  "triangulation_rule": "Independent reproduction is triggered by EXPECTED VALUE of error detection (required when EV of catching an error exceeds the cost of another run), not strictly by Class A. Usually coincides with Class A; a foundational computation may deserve reproduction pre-promotion, a routine doc edit inside a Class-A packet may not.",
+  "reopen_evidence_stream": ".automation/execution_evidence.jsonl",
+  "retrospective_rule": "Artifacts generated before a rule existed belong to an earlier regime: label 'governance v1 (retrospective)', never rewrite, never upgrade-by-declaration; regenerate from logs where feasible.",
+  "budget_rule": "Budget is a VALIDATOR INPUT with halt-not-degrade semantics: validation failure -> halt; budget exhaustion -> halt; missing dependency declaration -> halt. NEVER skip a validator for budget.",
+  "invariants": [
+    "Never replace a map with an identification.",
+    "The automation may produce, organize, and challenge evidence; it never certifies evidence.",
+    "Deterministic software decides whether AI is needed; AI never decides whether deterministic software should have run.",
+    "Budget exhaustion halts automation; it never relaxes validation."
+  ],
+  "adversarial_exemption": "The change-gate never starves the adversarial function: destroy-attempts are SCHEDULED reasoning on unchanged repos by design, logged in the run ledger as outcome 'adversarial' - legitimate spend, not waste.",
+  "reasoning_efficiency_metrics": "tokens per changed artifact and per accepted packet (usable now, in governance_metrics report); tokens per promoted theorem is long-run only - UNDEFINED until promotions exist, never gated on early."
+}

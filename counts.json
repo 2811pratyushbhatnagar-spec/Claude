@@ -1,0 +1,60 @@
+{
+  "_meta": {
+    "note": "Structured counts are the SOURCE OF TRUTH for enumeration numbers. Prose renders as explicit 'N of M' generated/checked from this file - no bare ratios anywhere (kills the 56/37 vs 37/56 ambiguity). Internal coherence (total = det + nondet; fraction fields consistent) is guarded by test_consistency; values are guarded against recomputation by test_regression.",
+    "nondeterministic_definition": "PINNED (2026-07-05, per audit caveat): 'nondeterministic' means SOME effect among E0, E1, F, G is not single-valued (equivalently: F or G not single-valued - same count). Under the narrower 'F alone not single-valued' reading the n=2 free count would be 25, not 37. All counts in this file use the pinned any-effect reading.",
+    "predicate_warning": "w1/w2 (converse-containment, printed by ledger_A_round2.py) are DIFFERENT predicates from RET-existence/RET-exclusivity (Delta-inclusions, recomputed in test_regression). Do not conflate.",
+    "verification_levels": ["builder-only", "cross-confirmed", "externally-audited"],
+    "artifact_class": "values are canonical data, regression-guarded; any RENDERING of them is Class D and never presentable as a Class-A result (DECISION-CLASSES.md)",
+    "updated": "2026-07-04"
+  },
+  "counts": {
+    "feq-free-n2": {
+      "description": "F-eq survivors, identity effects free (forced E0=F;G, E1=G;F), |S0|=|S1|=2",
+      "count_total": 56, "count_deterministic": 19, "count_nondeterministic": 37,
+      "fraction_nondeterministic": { "numerator": 37, "denominator": 56, "value": 0.6607 },
+      "verification": "cross-confirmed"
+    },
+    "feq-free-n3": {
+      "description": "F-eq survivors, identity effects free, |S0|=|S1|=3",
+      "count_total": 4400, "count_deterministic": 313, "count_nondeterministic": 4087,
+      "fraction_nondeterministic": { "numerator": 4087, "denominator": 4400, "value": 0.9289 },
+      "verification": "cross-confirmed"
+    },
+    "feq-subid-n2": {
+      "description": "F-eq survivors, identity effects within Id (D5 sub-identity rung), |S|=2; = |I_2| in cardinality",
+      "count_total": 7, "count_deterministic": 7, "count_nondeterministic": 0,
+      "fraction_nondeterministic": { "numerator": 0, "denominator": 7, "value": 0.0 },
+      "verification": "builder-only"
+    },
+    "feq-subid-n3": {
+      "description": "F-eq survivors, identity effects within Id, |S|=3; = |I_3| in cardinality",
+      "count_total": 34, "count_deterministic": 34, "count_nondeterministic": 0,
+      "fraction_nondeterministic": { "numerator": 0, "denominator": 34, "value": 0.0 },
+      "verification": "builder-only"
+    },
+    "feq-strict-n2": {
+      "description": "F-eq survivors, strict identity effects (=Id), |S|=2; = |S_2| in cardinality (Theorem R1 rung)",
+      "count_total": 2, "count_deterministic": 2, "count_nondeterministic": 0,
+      "fraction_nondeterministic": { "numerator": 0, "denominator": 2, "value": 0.0 },
+      "verification": "cross-confirmed"
+    },
+    "feq-strict-n3": {
+      "description": "F-eq survivors, strict identity effects, |S|=3; = |S_3| in cardinality",
+      "count_total": 6, "count_deterministic": 6, "count_nondeterministic": 0,
+      "fraction_nondeterministic": { "numerator": 0, "denominator": 6, "value": 0.0 },
+      "verification": "builder-only"
+    },
+    "fsup-free-n2": {
+      "description": "F-sup survivors, identity effects free, |S|=2 (full 65,536 space)",
+      "count_total": 3994, "count_deterministic": 1899, "count_nondeterministic": 2095,
+      "fraction_nondeterministic": { "numerator": 2095, "denominator": 3994, "value": 0.5245 },
+      "verification": "builder-only"
+    },
+    "fsub-free-n2": {
+      "description": "F-sub survivors, identity effects free, |S|=2 (full 65,536 space)",
+      "count_total": 679, "count_deterministic": 19, "count_nondeterministic": 660,
+      "fraction_nondeterministic": { "numerator": 660, "denominator": 679, "value": 0.9720 },
+      "verification": "builder-only"
+    }
+  }
+}

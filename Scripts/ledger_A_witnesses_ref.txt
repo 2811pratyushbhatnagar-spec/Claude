@@ -1,0 +1,30 @@
+=== Witness matrix (A3 strict, F eq, EI strong) ===
+         A1    A2    A3    A4    A5     F    EI     T     R
+W1        T     T     T     T     T     T     T     T     T
+W2p       T     T     T     F     T     T     T     T     T
+W3        T     T     T     T     T     F     F     T     F
+W4        T     T     T     F     T     T     T     F     F
+W6        T     T     T     T     T     F     F     T     F
+W7a       T     T     T     F     T     F     T     F     F
+W7b       T     T     T     F     T     F     T     F     F
+W8        T     T     T     F     T     T     T     T     F
+W9        T     T     F     T     T     T     T     T     T
+W10       T     T     T     T     T     F     T     T     T
+W11       T     T     F     T     T     T     F     T     F
+W12       T     T     T     T     T     T     T     F     T
+
+=== Decision checks ===
+D1 partial compose: 8 type-mismatched pairs (e.g. ('e0', 'e1')) -> total comp + A1 UNSAT. PARTIAL wins.
+D2 relational inverse: W2p contacts with no coherent inverse candidate: ['f', 'g'] -> total inverse op excludes W2p. RELATIONAL wins.
+D3 step as relation: W4 (two outcomes from one state) core-consistent: A1..A5=[True, True, True, True]. FUNCTION would exclude it. RELATION wins.
+D4 undo quantifiers: W6 -> strong=False, w1=False, bisim=True (return-to-copy separates bisim from strong/w1).
+D5 F: W7a decorative-composite passes sub(True) fails eq(False); W7b magic-composite passes sup(True) fails eq(False). EQUALITY wins (no junk, no magic).
+D6 availability/execution split: W8 idle-availability pairs [('f', 'a')] core-consistent (A5=True); merged signature cannot express. SPLIT wins.
+
+=== Theorem check: core+A3(strict)+A4+F(eq) entails EI(strong) ===
+W1: hypotheses=True, EI-strong=True
+W12: hypotheses=True, EI-strong=True
+W11 (A3 LOOSE): A3loose=True, F-eq=True, EI-strong=False -> loose identities break the derivation; STRICT A3 required.
+
+=== Bonus: R (return) vs A4 (invertibility) ===
+W2p: A4=False but R=True, T=True -> return is reachability, strictly weaker than invertibility.

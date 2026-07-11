@@ -2,6 +2,8 @@
 # validate passes clean. Procedures-only: committing derived history is not a governance
 # decision; this never force-pushes or rewrites history. Wire it after a cycle, or schedule it.
 Set-Location "C:\Users\Bhatnagar\Desktop\New folder (2)\framework"
+python Scripts/worker_guard.py
+if ($LASTEXITCODE -ne 0) { Write-Host "worker_guard VIOLATION (WORKER-CONTRACT.md) -- not committing. Report instead."; exit 1 }
 python validate.py
 if ($LASTEXITCODE -ne 0) { Write-Host "validate FLAGGED -- not committing. Resolve flags first."; exit 1 }
 $changes = git status --porcelain

@@ -1,0 +1,20 @@
+[
+  {"agent_id": "claude_refuter_fp", "model": "claude", "evidence_path": "first-principles", "mandate": "Refutation",
+   "claims": [
+     "nonexistence-of-I-is-real",
+     "home-broader-than-plain-weighted-limits",
+     "nontriviality-not-a-novel-theorem-per-domain",
+     "open-vacuous-compatible",
+     "not closure-reading-holds-only-under-meet-closure",
+     "closure-reframing-correct-but-not-resolving"
+   ]},
+  {"agent_id": "claude_refuter_ce", "model": "claude", "evidence_path": "counterexample", "mandate": "Refutation",
+   "claims": [
+     "nonexistence-of-I-is-real",
+     "home-broader-than-plain-weighted-limits",
+     "nontriviality-not-a-novel-theorem-per-domain",
+     "open-vacuous-compatible",
+     "not closure-reading-holds-only-under-meet-closure",
+     "nontriviality-open-not-known-not-false"
+   ]}
+]
