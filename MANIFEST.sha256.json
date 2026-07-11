@@ -1,7 +1,7 @@
 {
   "_meta": {
     "note": "Cryptographic freeze: validate.py verifies 'core' hashes FIRST (root of trust - if the core is compromised nothing downstream is trustworthy), then 'files'. Any byte change without a human-authorized re-pin FAILS validation (core changes are Class-A; Ledger A/B changes are Class-A). Baseline pin records existing state only - pinning is not a new freeze decision.",
-    "generated_at": "2026-07-11T06:22:39+05:30",
+    "generated_at": "2026-07-11T17:39:49+05:30",
     "authorized_by": "Pratyush - Q-GOV-V2-FREEZE ratification 2026-07-11"
   },
   "core": {
@@ -13,7 +13,7 @@
     "Scripts/cycle_check.py": "831facf0d4a7a7c6beeefe1c4c842da6ed8494586feacedb09b829df44ee3174",
     "Scripts/stage0_gate.py": "21821beebac9e67ae4c247252a802460e90a59995bda2aa3e8c95274f91234b3",
     "DEPENDENCIES.json": "0d4ccda5e353ba99f58685991a9f54a2cd1041ab0ff17f458385969b4588731a",
-    "GOVERNANCE-VERSION.json": "0fdca31a18fc8caa0862eac410ac0bdbc6a40a4c5d6755398ca51b3f4c54b028"
+    "GOVERNANCE-VERSION.json": "e28ccff801b1524d5201fce554ff6e2530dc7cf1b4a795e1ebb8e706d61a0e02"
   },
   "files": {
     "LedgerA/ledger_A_canonical.md": "4d040eda3386737ed8176dc9e05ec6fd71eeb8960133596d4e863c01b63e2a2e",
