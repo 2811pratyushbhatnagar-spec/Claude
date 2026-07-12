@@ -1,0 +1,39 @@
+A) PINWHEEL: Aut(K), form counts, canonical J
+   symmetries found over 360 sampled rotations+reflections: [('rot', 0), ('rot', 120), ('rot', 240)]
+   Aut(K) = Z3 exactly (no reflections: distinct radii kill them). CONFIRMED
+   J = rot90; J^2 = -I dev 0.0; [J, rot120] dev 0.0
+
+B) MINIMAL JORDAN IMPORT: spin factor V2 = R(+)R^2, (s,x)o(t,y)=(st+<x,y>, sy+tx)
+   commutativity dev 0.0e+00; Jordan identity dev 8.9e-16  -> V2 is a Jordan algebra
+   idempotent p(phi=0.0): p o p - p dev 0.0e+00
+   idempotent p(phi=1.0): p o p - p dev 0.0e+00
+   idempotent p(phi=2.5): p o p - p dev 0.0e+00
+   -> CONTINUUM of idempotents (circle |y|=1/2).
+   sum-of-squares partitions of 3 (ordered, n>=1): [(1, 1, 1)]
+   -> only C^3; C^3_sa = R^3 has exactly 2^3 = 8 idempotents (checked: components in {0,1}).
+   -> V2 is NOT the sa part of any complex *-algebra: A-S/Doering product set EMPTY here.
+
+C) REAL LOOPHOLE: V2 = Sym(M2(R)); transpose fixes Sym pointwise and swaps ab<->ba
+   (ab)^T = b^T a^T dev 0.0e+00; transpose|_Sym = id  -> M2(R) ~ M2(R)^op via iso FIXING observables
+   -> even the real-associative route yields NO orientation Z2 for the rebit.
+   Contrast M2(C): for Hermitian h, h^T = conj(h) (entrywise), NOT h -> transpose does not fix Herm.
+
+D) CONTROL (A-S applies): M2(C), products ab (c=1) vs ba (c=0)
+   Jordan part shared by both products: dev 0.0e+00
+   psi^op = -psi (product swap <=> skew-derivation sign flip <=> i <-> -i): dev 0.0e+00
+   psi_a skew wrt HS: dev 4.4e-16;  psi_a(a) = 0: dev 0.0e+00
+   associativity of a*b = c(ab)+(1-c)(ba):  c=0: 4.4e-16  c=1: 4.4e-16  c=1/2 (Jordan midpoint): 1.42  (nonzero = not associative)
+   -> the central-projection Z2 {c=0, c=1} is exactly the psi/i sign: Doering's picture verified on M2(C).
+
+E) CONVERSE MISMATCH: qubit traceless part R^3 under SO(3): invariant antisym forms
+   dim invariant antisym forms on R^3 under SO(3) generators: 0 (expect 0)
+   -> our (1,1) criterion FAILS for the qubit exactly where the A-S orientation Z2 is NONTRIVIAL.
+
+VERDICT: same output TYPE (Z2 conjugation torsor); provably NOT the same invariant.
+dim der(V2) = 1  (expect 1: so(2) rotations of the spin part; abelian)
+[L_e1, L_e2] max entry = 1.0  (expect nonzero: it is the rotation generator)
+rows of [L_e1, L_e2]: [[0.0, 0.0, 0.0], [0.0, 0.0, 1.0], [0.0, -1.0, 0.0]]
+
+CONCLUSION: any linear psi into der(V2) has [psi_a, psi_b] = 0 (abelian target),
+but a dynamical correspondence needs [psi_a, psi_b] = -[L_a, L_b] != 0.
+=> V2 admits NO dynamical correspondence. Direct proof; no Alfsen-Shultz theorem used.

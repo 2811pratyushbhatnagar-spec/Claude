@@ -1,0 +1,27 @@
+ROUND 2 - broadened R4b-S: SUBSYSTEM reading (basis-aligned factorizations)
+====================================================================================================
+  M1 D=2 act=[0]           dim 2: NO factorization (both factors >=2) -> R4bS(sub) FAILS (prime/small dim)
+  M1 D=3 act=[0, 1]        dim 3: NO factorization (both factors >=2) -> R4bS(sub) FAILS (prime/small dim)
+  M1 D=4 act=[0, 1]        fact 2x2: COMPATIBLE  R3-cands=  2  R4bS(sub)-pass=  2  +write-protected=  0
+  M2b D=4 act={0,1}        fact 2x2: COMPATIBLE  R3-cands=  2  R4bS(sub)-pass=  2  +write-protected=  0
+  -- M3 D=2, CONTENT predicate (P_act=|0><0| (x) I, record factor free):
+  M3 D=2 content           fact 2x2: COMPATIBLE  R3-cands=  2  R4bS(sub)-pass=  2  +write-protected=  0
+  -- M3 D=2, ORIGINAL orientation predicate (P(x)Q ties BOTH factors):
+  M3 D=2 orientation       fact 2x2: INCOMPATIBLE (P_act not P_c(x)I)
+
+MULTIPLICITY reading == Round-1 R4b-weak (structural identity + spot check)
+  The multiplicity index is a state property inside the active region;
+  its flag census and forgery census coincide with Round 1's diagonal-T case.
+  Spot check M1 D=3 act={0,1}: Round-1 weak survivors = 1; multiplicity reading = 1. CONSISTENT
+
+SUPERSELECTION reading: structurally impossible as a rejection record:
+  R5 requires A(W)=1 and A(W+)=1 -> same (active) sector -> a sector-label
+  flag T_sector has <W|T|W> = <W+|T|W+>, so it can never fire on one and not the other. FAILS.
+
+R4b-P (process record) via dilation - machine demo, M1 D=2 dilated by one record qubit
+====================================================================================================
+  A(W)=1: True;  R3 for U_rejrec (A(UW)=0): True;  renewal A(VUW)=1: True
+  record flag: <W|T|W>=0 -> <VUW|T|VUW>=1  (subsystem record SET)
+  forgery: G=I(x)X is rejection-free (A(GW)=1) and GW == VUW ray: True
+  => the retained instrument outcome IS a subsystem record on system(+)ancilla:
+     dilated M1 == M3-with-content-predicate, analysis identical, forgery included.
