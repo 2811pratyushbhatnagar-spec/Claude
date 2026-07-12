@@ -1,0 +1,17 @@
+Phase A — R1-R5 + determinacy over declared families (all exact, ray-deduped)
+==============================================================================================================
+M1 D=2 |act|=1             rays=   3  R3-pass=  1  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  
+M1 D=3 |act|=2             rays=   4  R3-pass=  1  R1-R5(weak)=  1  det(weak)=  1  R1-R5(strong)=  0  
+M1 D=4 |act|=2             rays=   5  R3-pass=  2  R1-R5(weak)=  2  det(weak)=  2  R1-R5(strong)=  0  
+M2a D=2 (frame pred.)      rays=   3  R3-pass=  1  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  predicate NON-PROJECTIVE (frame ray-sets)
+M2a D=3 (frame pred.)      rays=   4  R3-pass=  1  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  predicate NON-PROJECTIVE (frame ray-sets)
+M2b D=2 A/I=1/1            rays=   3  R3-pass=  1  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  
+M2b D=4 A/I=2/2            rays=   5  R3-pass=  2  R1-R5(weak)=  2  det(weak)=  2  R1-R5(strong)=  0  
+M3 D=2 SYMMETRIC pred      rays=   4  R3-pass=  3  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  R3 for swap expected FAIL (A(SW)=1)
+M3 D=2 ORIENTATION pred rk1 rays=   4  R3-pass=  1  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  
+M3 D=3 SYMMETRIC pred      rays=   9  R3-pass=  8  R1-R5(weak)=  0  det(weak)=  0  R1-R5(strong)=  0  R3 for swap expected FAIL (A(SW)=1)
+M3 D=3 ORIENTATION pred rk2 rays=   9  R3-pass=  2  R1-R5(weak)=  2  det(weak)=  2  R1-R5(strong)=  0  
+==============================================================================================================
+Named-candidate spot checks:
+  swap, symmetric pred:  A(SW) = 1 (unchanged ray) -> R3 FAIL confirmed: True
+  swap, orientation pred: S|01> = |10> in inactive -> R3 PASS confirmed: True
