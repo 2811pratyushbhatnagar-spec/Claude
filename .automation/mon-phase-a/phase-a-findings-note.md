@@ -83,3 +83,62 @@ construction, per house rule.
   invertible-admissible anyway; noted).
 - Determinacy used ~op = ray equality on the fixed W (declared); coarser
   operational equivalences would only merge classes, never split them.
+
+---
+
+# Round 2 addendum — broadened R4b-S + process-level R4b-P (2026-07-12)
+
+**Input status:** Round-2 spec received in relay OUTLINE only (queue file
+`ULTRACODE-QUEUE-MON-PHASE-A-2026-07-11.md` not yet on the shared branch);
+the broadened readings below are ultracode's DECLARED stand-in mechanizations
+— diff against the §-exact text on push. D_arrow/D_SQDB machinery (§13–16)
+likewise unpushed; R4b-P handled by a dilation argument instead, flagged.
+Artifacts: `round2_r4b_broadened.py`, `round2_output.txt` (verbatim).
+
+## Results
+
+1. **Subsystem reading** (record = free tensor factor; compatibility =
+   P_act = P_c⊗I): passes exactly where a compatible basis-aligned
+   factorization exists — M1 D=4 and M2b D=4 pass **by becoming** 2⊗2 with
+   content-only activeness (structurally identical to M3-content); M1 D=2,3
+   fail for dimension reasons (no factorization); **M3's own §7 orientation
+   predicate (P⊗Q) is INCOMPATIBLE with the subsystem reading** — it ties the
+   record factor, so even the doubled carrier passes only after relaxing its
+   predicate to content-only (P_act = P_c⊗I). Round-1 conjecture confirmed
+   and sharpened: single carriers pass only by covertly being M3, and M3
+   itself needs a predicate revision for its doubling to do the work.
+2. **Write-protection: 0 survivors under every reading.** The subsystem
+   record stays forgeable — I⊗X writes the flag without any rejection
+   (machine-confirmed). Room and write-protection are independent.
+3. **Multiplicity reading ≡ Round-1 R4b-weak** (structural identity; spot
+   check consistent). Dimension artifact, unchanged.
+4. **Superselection reading: structurally impossible** — R5 forces W and W₊
+   into the same (active) sector; a sector label can never fire on one and
+   not the other. One-line proof, no enumeration needed.
+5. **R4b-P via dilation (machine demo):** a retained instrument outcome is
+   storage; storage is an ancilla; the dilated M1 (system⊗record-qubit) is
+   *verbatim* M3-with-content-predicate — R3, renewal, record-set all pass,
+   and the forgery (I⊗X) comes along too. **Process-level recording is not a
+   third way: it IS doubling, by Stinespring.** Caveat: if the queue file's
+   R4b-P (D_arrow/D_SQDB-based) differs from record-retention, rerun needed.
+
+## Answer to Round 2's decisive question
+
+Does M3 ever pass on process-level grounds where no generalized state-level
+record can? **No — because the two routes coincide.** Every reading sorts
+into exactly two independent requirements:
+- **ROOM:** a record needs a free tensor factor with content-only activeness.
+  This forces M3-structure — natively, by reinterpretation (composite dims),
+  or by dilation (process retention). Prime-dimension single carriers are
+  excluded outright. *The Register-Doubling Gap's positive half lives here.*
+- **WRITE-PROTECTION:** no state, subsystem, sector, or dilated record
+  certifies that rejection *occurred* while the record factor is freely
+  writable. This is not a carrier property at all — it requires an
+  admissibility constraint (record-factor write access coupled to rejection
+  events). *Phase-B's real target: an Adm-structure axiom, e.g. "the only
+  admissible operations touching H_record are those induced by R3-passing
+  events on H_content" — under which the forgery census should collapse.*
+
+Register note: nothing here promotes anything; MoN lane, non-canon;
+predicate-revision suggestion for M3 (P_act = P_c⊗I) is a proposal for the
+Journal, steward's call.
